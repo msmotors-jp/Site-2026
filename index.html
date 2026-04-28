@@ -42,8 +42,8 @@ padding:5px 10px;
 .hero{
 height:90vh;
 background:
-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-url('1696FF85-FB4A-4185-BAA4-8D17C9543B96.png') center/cover no-repeat;
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),
+url('IMG_8233.jpeg') center/cover no-repeat;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -52,4 +52,204 @@ text-align:center;
 }
 
 .hero h1{
-font
+font-family:'Orbitron';
+font-size:55px;
+letter-spacing:3px;
+text-transform:uppercase;
+text-shadow:0 0 20px red;
+margin:0;
+}
+
+.hero p{
+opacity:0.7;
+}
+
+.btn{
+margin-top:20px;
+padding:15px 30px;
+background:#ff0000;
+color:white;
+text-decoration:none;
+font-family:'Orbitron';
+letter-spacing:2px;
+box-shadow:0 0 15px red;
+}
+
+/* SECTION */
+.section{
+padding:60px 20px;
+text-align:center;
+}
+
+.section h2{
+font-family:'Orbitron';
+letter-spacing:2px;
+}
+
+/* CAR */
+.car img{
+width:90%;
+max-width:500px;
+border-radius:10px;
+box-shadow:0 0 20px rgba(255,0,0,0.3);
+}
+
+/* MAP */
+.map iframe{
+width:100%;
+height:300px;
+border:0;
+}
+
+/* FLOAT BUTTONS */
+.float-buttons{
+position:fixed;
+bottom:20px;
+right:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+z-index:999;
+}
+
+.line-btn{
+background:#00c300;
+color:white;
+padding:12px 15px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.whatsapp-btn{
+background:#25D366;
+color:white;
+padding:12px 15px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* FOOTER */
+.footer{
+text-align:center;
+padding:30px;
+border-top:1px solid #111;
+opacity:0.6;
+}
+
+a{
+color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+<h2>MS Motors</h2>
+
+<div class="lang">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('jp')">JP</button>
+</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<h1 id="title">JDM Drift Cars</h1>
+<p id="subtitle">Turbo / Manual / Export Ready</p>
+
+<a class="btn" href="https://wa.me/819041616477">WhatsApp</a>
+</div>
+
+<!-- CAR -->
+<div class="section">
+<h2 id="featured">Featured Car</h2>
+
+<div class="car">
+<img src="1696FF85-FB4A-4185-BAA4-8D17C9543B96.png">
+<p id="car-desc">
+Nissan Silvia S15<br>
+Drift Spec / Turbo / Manual
+</p>
+</div>
+</div>
+
+<!-- IMAGE -->
+<div class="section">
+<h2 id="japan">Japan Quality</h2>
+
+<img src="679D8D64-19C8-4941-902C-5990C849228C.png" style="width:90%;max-width:500px;border-radius:10px;">
+</div>
+
+<!-- MAP -->
+<div class="section map">
+<h2 id="location">Location</h2>
+
+<iframe src="https://www.google.com/maps?q=長野県東筑摩郡朝日村西洗馬410-1&output=embed"></iframe>
+
+<p>
+〒390-1101<br>
+長野県東筑摩郡朝日村西洗馬410-1
+</p>
+</div>
+
+<!-- SOCIAL -->
+<div class="section">
+<h2>Follow</h2>
+
+<p>
+<a href="https://instagram.com/msmotors_oficial" target="_blank">
+Instagram
+</a>
+</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© MS Motors Japan
+</div>
+
+<!-- FLOAT BUTTONS -->
+<div class="float-buttons">
+
+<a href="#" class="line-btn">LINE</a>
+
+<a href="https://wa.me/819041616477" target="_blank" class="whatsapp-btn">
+WhatsApp
+</a>
+
+</div>
+
+<!-- LANGUAGE -->
+<script>
+
+function setLang(lang){
+
+if(lang==='jp'){
+document.getElementById('title').innerText="ドリフトカー専門";
+document.getElementById('subtitle').innerText="ターボ・マニュアル・輸出可能";
+document.getElementById('featured').innerText="おすすめ車両";
+document.getElementById('car-desc').innerHTML="日産シルビア S15<br>ドリフト仕様 / MT";
+document.getElementById('japan').innerText="日本クオリティ";
+document.getElementById('location').innerText="所在地";
+}
+
+else{
+document.getElementById('title').innerText="JDM Drift Cars";
+document.getElementById('subtitle').innerText="Turbo / Manual / Export Ready";
+document.getElementById('featured').innerText="Featured Car";
+document.getElementById('car-desc').innerHTML="Nissan Silvia S15<br>Drift Spec / Turbo / Manual";
+document.getElementById('japan').innerText="Japan Quality";
+document.getElementById('location').innerText="Location";
+}
+
+}
+
+</script>
+
+</body>
+</html>
