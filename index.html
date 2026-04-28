@@ -3,192 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>MS Motors Japan</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: black;
-  color: white;
-}
-
-/* HEADER */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 20px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(5px);
-  z-index: 999;
-}
-
-.logo {
-  height: 40px;
-}
-
-.lang button {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  margin-left: 10px;
-  padding: 5px 10px;
+body{
+  margin:0;
+  background:#000;
+  color:white;
+  font-family:Arial;
 }
 
 /* HERO */
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
+.hero{
+  height:100vh;
+  background:url('hero.jpg.PNG') center/cover no-repeat;
 }
 
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  animation: slideShow 30s infinite;
+/* LOGO */
+.logo{
+  position:fixed;
+  top:20px;
+  left:20px;
+  height:40px;
 }
 
-.slide:nth-child(1) { animation-delay: 0s; }
-.slide:nth-child(2) { animation-delay: 5s; }
-.slide:nth-child(3) { animation-delay: 10s; }
-.slide:nth-child(4) { animation-delay: 15s; }
-.slide:nth-child(5) { animation-delay: 20s; }
-.slide:nth-child(6) { animation-delay: 25s; }
-
-@keyframes slideShow {
-  0% {opacity:0;}
-  10% {opacity:1;}
-  20% {opacity:1;}
-  30% {opacity:0;}
-  100% {opacity:0;}
+/* BOTÕES */
+.float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
 }
 
-.hero-content {
-  z-index: 2;
+.float a{
+  padding:12px 20px;
+  border-radius:30px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-h1 {
-  font-size: 40px;
-  letter-spacing: 3px;
+.line{background:#00c300;}
+.whatsapp{background:#25D366;}
+
+/* QR */
+.qr{
+  display:none;
+  position:fixed;
+  right:20px;
+  bottom:100px;
+  background:#000;
+  padding:10px;
+  border-radius:10px;
 }
 
-.subtitle {
-  color: gray;
-  margin: 10px 0 20px;
+.qr img{
+  width:150px;
 }
-
-.btn {
-  background: red;
-  padding: 15px 30px;
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-}
-
-/* FLOAT BUTTONS */
-.float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
-.float a {
-  display: block;
-  margin-top: 10px;
-  padding: 12px 20px;
-  border-radius: 20px;
-  color: white;
-  text-decoration: none;
-}
-
-.line { background: #00c300; }
-.whatsapp { background: #25d366; }
-
-/* SECTION */
-.section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-a { color: red; }
-
 </style>
 </head>
 
 <body>
 
-<header>
-  <img src="1696FF85-FB4A-4185-BAA4-8D17C9543B96.png" class="logo">
-  <div class="lang">
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('jp')">JP</button>
-  </div>
-</header>
+<!-- LOGO -->
+<img src="logo.png.PNG" class="logo">
 
-<section class="hero">
+<!-- HERO -->
+<section class="hero"></section>
 
-  <!-- SLIDES (suas fotos) -->
-  <img src="IMG_8233.jpeg" class="slide">
-  <img src="1696FF85-FB4A-4185-BAA4-8D17C9543B96.png" class="slide">
-  <img src="679D8D64-19C8-4941-902C-5990C849228C.png" class="slide">
-
-  <div class="hero-content">
-    <h1 id="title">JDM DRIFT CARS</h1>
-    <p class="subtitle" id="subtitle">Turbo / Manual / Export Ready</p>
-    <a href="https://wa.me/819041616477" class="btn">WhatsApp</a>
-  </div>
-
-</section>
-
-<section class="section">
-  <h2 id="location">Location</h2>
-  <p>
-    〒390-1101<br>
-    長野県東筑摩郡朝日村西洗馬410-1
-  </p>
-
-  <p>
-    <a href="https://maps.google.com">Open in Google Maps</a>
-  </p>
-</section>
-
-<section class="section">
-  <h2>Instagram</h2>
-  <a href="https://instagram.com/msmotors_oficial">
-    @msmotors_oficial
-  </a>
-</section>
-
-<footer class="section">
-  © MS Motors Japan
-</footer>
-
+<!-- BOTÕES -->
 <div class="float">
-  <a href="#" class="line">LINE</a>
+  <a href="#" class="line" onclick="toggleQR()">LINE</a>
   <a href="https://wa.me/819041616477" class="whatsapp">WhatsApp</a>
 </div>
 
+<!-- QR CODE -->
+<div class="qr" id="qrBox">
+  <img src="line-qr.png.JPG">
+</div>
+
 <script>
-function setLang(lang){
-  if(lang === 'jp'){
-    document.getElementById('title').innerText = "JDM ドリフトカー";
-    document.getElementById('subtitle').innerText = "ターボ / マニュアル / 輸出可能";
-    document.getElementById('location').innerText = "所在地";
-  } else {
-    document.getElementById('title').innerText = "JDM DRIFT CARS";
-    document.getElementById('subtitle').innerText = "Turbo / Manual / Export Ready";
-    document.getElementById('location').innerText = "Location";
-  }
+function toggleQR(){
+  var qr = document.getElementById("qrBox");
+  qr.style.display = qr.style.display === "block" ? "none" : "block";
 }
 </script>
 
