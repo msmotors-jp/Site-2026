@@ -3,164 +3,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>MS Motors Japan</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
-
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: black;
+  color: white;
 }
 
-body{
-  background:#000;
-  color:#fff;
-  font-family:'Rajdhani',sans-serif;
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
+  z-index: 999;
 }
 
-header{
-  position:fixed;
-  top:0;
-  width:100%;
-  z-index:1000;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:16px 20px;
-  background:rgba(0,0,0,.85);
-  border-bottom:1px solid #1a1a1a;
+.logo {
+  height: 40px;
 }
 
-.logo{
-  height:42px;
-  object-fit:contain;
-  filter:drop-shadow(0 0 8px rgba(255,0,0,.5));
+.lang button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  margin-left: 10px;
+  padding: 5px 10px;
 }
 
-.lang button{
-  background:#111;
-  color:#fff;
-  border:1px solid #444;
-  padding:8px 12px;
-  margin-left:6px;
-  font-family:'Orbitron';
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
 }
 
-.hero{
-  min-height:100vh;
-  background:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.9)),
-    url('IMG_8233.jpeg') center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:120px 20px 40px;
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: slideShow 30s infinite;
 }
 
-.hero h1{
-  font-family:'Orbitron';
-  font-size:46px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  text-shadow:0 0 18px red;
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 5s; }
+.slide:nth-child(3) { animation-delay: 10s; }
+.slide:nth-child(4) { animation-delay: 15s; }
+.slide:nth-child(5) { animation-delay: 20s; }
+.slide:nth-child(6) { animation-delay: 25s; }
+
+@keyframes slideShow {
+  0% {opacity:0;}
+  10% {opacity:1;}
+  20% {opacity:1;}
+  30% {opacity:0;}
+  100% {opacity:0;}
 }
 
-.hero p{
-  margin-top:14px;
-  font-size:22px;
-  color:#ddd;
+.hero-content {
+  z-index: 2;
 }
 
-.btn{
-  display:inline-block;
-  margin-top:28px;
-  padding:15px 32px;
-  background:#ff0000;
-  color:#fff;
-  text-decoration:none;
-  font-family:'Orbitron';
-  box-shadow:0 0 18px red;
+h1 {
+  font-size: 40px;
+  letter-spacing: 3px;
 }
 
-.section{
-  padding:65px 20px;
-  text-align:center;
+.subtitle {
+  color: gray;
+  margin: 10px 0 20px;
 }
 
-.section h2{
-  font-family:'Orbitron';
-  letter-spacing:2px;
-  margin-bottom:24px;
+.btn {
+  background: red;
+  padding: 15px 30px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.gallery{
-  display:grid;
-  gap:18px;
+/* FLOAT BUTTONS */
+.float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
 
-.gallery img{
-  width:100%;
-  border-radius:12px;
-  box-shadow:0 0 22px rgba(255,0,0,.25);
+.float a {
+  display: block;
+  margin-top: 10px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
 }
 
-.map iframe{
-  width:100%;
-  height:320px;
-  border:0;
-  border-radius:12px;
+.line { background: #00c300; }
+.whatsapp { background: #25d366; }
+
+/* SECTION */
+.section {
+  padding: 50px 20px;
+  text-align: center;
 }
 
-.float-buttons{
-  position:fixed;
-  right:18px;
-  bottom:22px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  z-index:999;
-}
+a { color: red; }
 
-.float-buttons a{
-  color:#fff;
-  text-decoration:none;
-  padding:12px 18px;
-  border-radius:50px;
-  font-weight:bold;
-  text-align:center;
-}
-
-.line-btn{
-  background:#00c300;
-}
-
-.whatsapp-btn{
-  background:#25D366;
-}
-
-footer{
-  padding:30px;
-  text-align:center;
-  color:#aaa;
-  border-top:1px solid #111;
-}
-
-@media(min-width:768px){
-  .gallery{
-    grid-template-columns:repeat(3,1fr);
-  }
-}
 </style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png" class="logo" alt="MS Motors">
-
+  <img src="1696FF85-FB4A-4185-BAA4-8D17C9543B96.png" class="logo">
   <div class="lang">
     <button onclick="setLang('en')">EN</button>
     <button onclick="setLang('jp')">JP</button>
@@ -168,61 +136,57 @@ footer{
 </header>
 
 <section class="hero">
-  <div>
-    <h1 id="title">JDM Drift Cars</h1>
-    <p id="subtitle">Turbo / Manual / Export Ready</p>
-    <a class="btn" href="https://wa.me/819041616477" target="_blank">WhatsApp</a>
+
+  <!-- SLIDES (suas fotos) -->
+  <img src="IMG_8233.jpeg" class="slide">
+  <img src="1696FF85-FB4A-4185-BAA4-8D17C9543B96.png" class="slide">
+  <img src="679D8D64-19C8-4941-902C-5990C849228C.png" class="slide">
+
+  <div class="hero-content">
+    <h1 id="title">JDM DRIFT CARS</h1>
+    <p class="subtitle" id="subtitle">Turbo / Manual / Export Ready</p>
+    <a href="https://wa.me/819041616477" class="btn">WhatsApp</a>
   </div>
+
 </section>
 
 <section class="section">
-  <h2 id="featured">Featured Cars</h2>
-
-  <div class="gallery">
-    <img src="IMG_8233.jpeg" alt="MS Motors car">
-    <img src="1696FF85-FB4A-4185-BAA4-8D17C9543B96.png" alt="MS Motors drift car">
-    <img src="679D8D64-19C8-4941-902C-5990C849228C.png" alt="MS Motors JDM car">
-  </div>
-</section>
-
-<section class="section map">
   <h2 id="location">Location</h2>
-
-  <iframe src="https://www.google.com/maps?q=長野県東筑摩郡朝日村西洗馬410-1&output=embed"></iframe>
-
   <p>
     〒390-1101<br>
     長野県東筑摩郡朝日村西洗馬410-1
+  </p>
+
+  <p>
+    <a href="https://maps.google.com">Open in Google Maps</a>
   </p>
 </section>
 
 <section class="section">
   <h2>Instagram</h2>
-  <a href="https://instagram.com/msmotors_oficial" target="_blank">
+  <a href="https://instagram.com/msmotors_oficial">
     @msmotors_oficial
   </a>
 </section>
 
-<footer>
+<footer class="section">
   © MS Motors Japan
 </footer>
 
-<div class="float-buttons">
-  <a href="#" class="line-btn">LINE</a>
-  <a href="https://wa.me/819041616477" target="_blank" class="whatsapp-btn">WhatsApp</a>
+<div class="float">
+  <a href="#" class="line">LINE</a>
+  <a href="https://wa.me/819041616477" class="whatsapp">WhatsApp</a>
 </div>
 
 <script>
 function setLang(lang){
   if(lang === 'jp'){
-    document.getElementById('title').innerText = "JDMドリフトカー";
-    document.getElementById('subtitle').innerText = "ターボ / マニュアル / 輸出対応";
-    document.getElementById('featured').innerText = "在庫車両";
+    document.getElementById('title').innerText = "JDM ドリフトカー";
+    document.getElementById('subtitle').innerText = "ターボ / マニュアル / 輸出可能";
     document.getElementById('location').innerText = "所在地";
-  }else{
-    document.getElementById('title').innerText = "JDM Drift Cars";
+  } else {
+    document.getElementById('title').innerText = "JDM DRIFT CARS";
     document.getElementById('subtitle').innerText = "Turbo / Manual / Export Ready";
-    document.getElementById('featured').innerText = "Featured Cars";
     document.getElementById('location').innerText = "Location";
   }
 }
