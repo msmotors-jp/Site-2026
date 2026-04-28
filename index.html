@@ -9,19 +9,30 @@
 body {
   margin:0;
   font-family:Arial;
-  background:#0a0a0a;
+  background:#0b0b0b;
   color:white;
 }
 
+/* HEADER */
 .header {
-  padding:20px;
-  text-align:center;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 20px;
   border-bottom:1px solid #222;
 }
 
+.lang button {
+  background:none;
+  color:white;
+  border:1px solid #444;
+  margin-left:5px;
+  padding:5px 10px;
+}
+
+/* HERO */
 .hero {
   background:url('IMG_8233.jpeg') center/cover no-repeat;
-  height:85vh;
+  height:90vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -41,19 +52,16 @@ body {
 .btn {
   margin-top:20px;
   padding:15px 30px;
-  background:#e60000;
+  background:#ff1a1a;
   color:white;
   text-decoration:none;
   font-weight:bold;
 }
 
+/* SECTION */
 .section {
   padding:50px 20px;
   text-align:center;
-}
-
-.car {
-  margin-top:20px;
 }
 
 .car img {
@@ -66,47 +74,108 @@ body {
   opacity:0.7;
 }
 
+/* MAP */
+.map iframe {
+  width:100%;
+  height:300px;
+  border:0;
+}
+
+/* FOOTER */
 .footer {
   padding:30px;
   text-align:center;
   border-top:1px solid #222;
   opacity:0.6;
 }
+
+a {
+  color:white;
+}
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <div class="header">
   <h2>MS Motors</h2>
+  <div class="lang">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('jp')">JP</button>
+  </div>
 </div>
 
+<!-- HERO -->
 <div class="hero">
-  <h1>JDM Performance Cars</h1>
-  <p>Drift / Turbo / Export Ready</p>
-  <a class="btn" href="https://wa.me/819041616477">CONTACT</a>
+  <h1 id="title">JDM Drift Cars</h1>
+  <p id="subtitle">Turbo / Manual / Export Ready</p>
+  <a class="btn" href="https://wa.me/819041616477">WhatsApp</a>
 </div>
 
+<!-- CAR -->
 <div class="section">
-  <h2>Featured Car</h2>
+  <h2 id="featured">Featured Car</h2>
 
   <div class="car">
     <img src="1696FF85-FB4A-4185-BAA4-8D17C9543B96.png">
-    <div class="spec">
+    <div class="spec" id="car-desc">
       Nissan Silvia S15<br>
-      Turbo / Manual / Drift Spec
+      Drift Spec / Turbo / Manual
     </div>
   </div>
 </div>
 
+<!-- SECOND IMAGE -->
 <div class="section">
-  <h2>Japan Quality</h2>
+  <h2 id="japan">Japan Quality</h2>
   <img src="679D8D64-19C8-4941-902C-5990C849228C.png">
 </div>
 
-<div class="footer">
-  © MS Motors - Japan
+<!-- MAP -->
+<div class="section map">
+  <h2 id="location">Location</h2>
+
+  <iframe 
+    src="https://www.google.com/maps?q=36.1407,137.8960&output=embed">
+  </iframe>
 </div>
+
+<!-- SOCIAL -->
+<div class="section">
+  <h2>Follow Us</h2>
+  <p>
+    <a href="https://instagram.com/msmotors_oficial" target="_blank">
+      Instagram
+    </a>
+  </p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © MS Motors Japan
+</div>
+
+<!-- LANGUAGE SCRIPT -->
+<script>
+function setLang(lang){
+  if(lang === 'jp'){
+    document.getElementById('title').innerText = "ドリフトカー専門店";
+    document.getElementById('subtitle').innerText = "ターボ・マニュアル・輸出可能";
+    document.getElementById('featured').innerText = "おすすめ車両";
+    document.getElementById('car-desc').innerHTML = "日産シルビア S15<br>ドリフト仕様 / ターボ / MT";
+    document.getElementById('japan').innerText = "日本クオリティ";
+    document.getElementById('location').innerText = "所在地";
+  } else {
+    document.getElementById('title').innerText = "JDM Drift Cars";
+    document.getElementById('subtitle').innerText = "Turbo / Manual / Export Ready";
+    document.getElementById('featured').innerText = "Featured Car";
+    document.getElementById('car-desc').innerHTML = "Nissan Silvia S15<br>Drift Spec / Turbo / Manual";
+    document.getElementById('japan').innerText = "Japan Quality";
+    document.getElementById('location').innerText = "Location";
+  }
+}
+</script>
 
 </body>
 </html>
