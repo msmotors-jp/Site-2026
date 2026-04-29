@@ -6,44 +6,127 @@
 <title>MS Motors Japan</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;color:#fff;font-family:Arial,sans-serif}
-.hero{height:100vh;background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.2)),url('IMG_8233.jpeg') center/cover no-repeat;position:relative}
-.logo{position:absolute;top:25px;left:22px;width:150px;z-index:5}
-.lang{position:absolute;top:25px;right:22px;z-index:5}
-.lang button{background:#111;color:#fff;border:1px solid #777;padding:8px 12px;margin-left:6px}
-.hero-text{position:absolute;left:25px;top:28%;z-index:5}
-.hero-text h1{font-size:52px;line-height:1;font-weight:900}
-.hero-text span{color:#e60000}
-.hero-text p{margin-top:18px;font-size:22px}
-.btn{display:inline-block;margin-top:24px;background:#e60000;color:#fff;padding:14px 26px;text-decoration:none;font-weight:bold;border-radius:4px}
-.features{display:grid;grid-template-columns:repeat(4,1fr);background:#050505;border-top:1px solid #222;border-bottom:1px solid #222}
-.feature{text-align:center;padding:28px 10px;border-right:1px solid #222}
-.feature h3{color:#e60000;margin-bottom:10px}
-.section{padding:45px 20px;text-align:center}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-.gallery img{width:100%;height:170px;object-fit:cover;border-radius:6px}
-.map iframe{width:100%;height:280px;border:0;border-radius:8px}
-.footer{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding:35px 20px;border-top:1px solid #222;background:#050505}
-.box{text-align:center}
-.box img{width:140px}
-.float{position:fixed;right:18px;bottom:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
-.float a{color:#fff;text-decoration:none;padding:13px 20px;border-radius:40px;font-weight:bold}
-.line{background:#00c300}
-.whatsapp{background:#25d366}
+body {
+  margin:0;
+  font-family: Arial;
+  background:#000;
+  color:#fff;
+}
 
-@media(max-width:700px){
-  .hero-text h1{font-size:42px}
-  .features{grid-template-columns:repeat(2,1fr)}
-  .footer{grid-template-columns:1fr}
+/* HERO */
+.hero {
+  position:relative;
+  height:90vh;
+  overflow:hidden;
+}
+
+.hero img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(0.6);
+}
+
+.hero-text {
+  position:absolute;
+  top:30%;
+  left:20px;
+}
+
+.hero-text h1 {
+  font-size:50px;
+  margin:0;
+}
+
+.hero-text span {
+  color:red;
+}
+
+.btn {
+  padding:12px 20px;
+  border:none;
+  margin-top:15px;
+  font-weight:bold;
+  border-radius:5px;
+}
+
+.whatsapp {
+  background:red;
+  color:white;
+}
+
+.line {
+  background:#00c300;
+  color:white;
+}
+
+/* LOGO */
+.logo {
+  position:absolute;
+  top:10px;
+  left:10px;
+  width:150px;
+}
+
+/* LANGUAGE */
+.lang {
+  position:absolute;
+  top:10px;
+  right:10px;
+}
+
+.lang button {
+  background:#000;
+  color:#fff;
+  border:1px solid #fff;
+  margin:2px;
+  padding:5px 10px;
+}
+
+/* FEATURES */
+.features {
+  display:flex;
+  justify-content:space-around;
+  text-align:center;
+  padding:20px;
+  border-top:1px solid #333;
+  border-bottom:1px solid #333;
+}
+
+/* GALLERY */
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  padding:10px;
+}
+
+.gallery img {
+  width:100%;
+  border-radius:5px;
+}
+
+/* LOCATION */
+.map {
+  padding:20px;
+}
+
+/* FOOTER */
+.footer {
+  text-align:center;
+  padding:20px;
+  border-top:1px solid #333;
 }
 </style>
-</head>
 
+</head>
 <body>
 
+<!-- HERO -->
 <section class="hero">
-  <img src="logo.png.PNG" class="logo">
+  <img src="hero.jpg">
+
+  <img src="logo.png" class="logo">
 
   <div class="lang">
     <button>EN</button>
@@ -51,62 +134,52 @@ body{background:#000;color:#fff;font-family:Arial,sans-serif}
   </div>
 
   <div class="hero-text">
-    <h1>JDM<br><span>DRIFT</span><br>CARS</h1>
+    <h1>JDM <span>DRIFT</span> CARS</h1>
     <p>Japan Quality.</p>
-    <a class="btn" href="https://wa.me/819041616477">WhatsApp</a>
+
+    <button class="btn whatsapp">WhatsApp</button>
+    <button class="btn line">LINE</button>
   </div>
 </section>
 
+<!-- FEATURES -->
 <section class="features">
-  <div class="feature"><h3>JDM</h3><p>Performance Cars</p></div>
-  <div class="feature"><h3>Custom</h3><p>Drift Support</p></div>
-  <div class="feature"><h3>Trusted</h3><p>Real Stock</p></div>
-  <div class="feature"><h3>Japan</h3><p>Quality</p></div>
+  <div>ターボ車専門</div>
+  <div>整備・カスタム</div>
+  <div>安心取引</div>
+  <div>輸出対応</div>
 </section>
 
-<section class="section">
-  <h2>Gallery</h2><br>
-  <div class="gallery">
-    <img src="car1.jpg.JPG">
-    <img src="car2.jpg.HEIC">
-    <img src="car3.jpg.HEIC">
-    <img src="car4.jpg.HEIC">
-    <img src="car5.jpg.HEIC">
-    <img src="car6.jpg.HEIC">
-    <img src="car7.jpg.HEIC">
-    <img src="car8.jpg.HEIC">
-    <img src="car9.jpg.HEIC">
-    <img src="car10.jpg.jpg">
-  </div>
+<!-- GALLERY -->
+<section class="gallery">
+  <img src="car1.jpg">
+  <img src="car2.jpg">
+  <img src="car3.jpg">
+  <img src="car4.jpg">
+  <img src="car5.jpg">
+  <img src="car6.jpg">
+  <img src="car7.jpg">
+  <img src="car8.jpg">
+  <img src="car9.jpg">
+  <img src="car10.jpg">
 </section>
 
-<section class="section map">
-  <h2>所在地</h2><br>
-  <p>〒390-1101<br>長野県東筑摩郡朝日村西洗馬410-1</p><br>
-  <iframe src="https://maps.google.com/maps?q=長野県東筑摩郡朝日村西洗馬410-1&output=embed"></iframe>
+<!-- LOCATION -->
+<section class="map">
+  <h2>所在地</h2>
+  <p>〒390-1101 長野県東筑摩郡朝日村西洗馬410-1</p>
+
+  <iframe
+    src="https://maps.google.com/maps?q=410-1%20Nishiseba&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    width="100%" height="250">
+  </iframe>
 </section>
 
+<!-- FOOTER -->
 <section class="footer">
-  <div class="box">
-    <h3>CarSensor</h3><br>
-    <a class="btn" href="https://www.carsensor.net/shop/nagano/329830001/?BKKN=AU6729676253&fed=othshoplinkb20190809001ns">在庫を見る</a>
-  </div>
-
-  <div class="box">
-    <h3>LINE QR</h3><br>
-    <img src="line-qr.png.JPG">
-  </div>
-
-  <div class="box">
-    <h3>Instagram</h3><br>
-    <a class="btn" href="https://instagram.com/msmotors_oficial">@msmotors_oficial</a>
-  </div>
+  <img src="line-qr.png" width="120"><br><br>
+  © MS Motors Japan
 </section>
-
-<div class="float">
-  <a class="line" href="#line">LINE</a>
-  <a class="whatsapp" href="https://wa.me/819041616477">WhatsApp</a>
-</div>
 
 </body>
 </html>
