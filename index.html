@@ -6,80 +6,65 @@
 <title>MS Motors Japan</title>
 
 <style>
-body{
-  margin:0;
-  background:#000;
-  color:white;
-  font-family:Arial;
-}
+body{margin:0;background:#000;color:white;font-family:Arial;}
+.hero{height:100vh;background:url('hero.jpg.PNG') center/cover no-repeat;}
+.logo{position:fixed;top:20px;left:20px;height:40px;z-index:10;}
 
-/* HERO */
-.hero{
-  height:100vh;
-  background:url('hero.jpg.PNG') center/cover no-repeat;
-}
-
-/* LOGO */
-.logo{
+.lang{
   position:fixed;
   top:20px;
-  left:20px;
-  height:40px;
-}
-
-/* BOTÕES */
-.float{
-  position:fixed;
   right:20px;
-  bottom:20px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
+  z-index:10;
 }
-
-.float a{
-  padding:12px 20px;
-  border-radius:30px;
+.lang button{
+  background:#111;
   color:white;
-  text-decoration:none;
-  font-weight:bold;
+  border:1px solid white;
+  padding:8px 12px;
+  margin-left:5px;
 }
 
+.text{
+  position:fixed;
+  top:42%;
+  width:100%;
+  text-align:center;
+  z-index:5;
+}
+.text h1{font-size:38px;}
+.text p{font-size:18px;}
+
+.float{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:10px;z-index:10;}
+.float a{padding:12px 20px;border-radius:30px;color:white;text-decoration:none;font-weight:bold;}
 .line{background:#00c300;}
 .whatsapp{background:#25D366;}
 
-/* QR */
-.qr{
-  display:none;
-  position:fixed;
-  right:20px;
-  bottom:100px;
-  background:#000;
-  padding:10px;
-  border-radius:10px;
-}
-
-.qr img{
-  width:150px;
-}
+.qr{display:none;position:fixed;right:20px;bottom:100px;background:#000;padding:10px;border-radius:10px;z-index:10;}
+.qr img{width:150px;}
 </style>
 </head>
 
 <body>
 
-<!-- LOGO -->
 <img src="logo.png.PNG" class="logo">
 
-<!-- HERO -->
+<div class="lang">
+  <button onclick="setLang('en')">EN</button>
+  <button onclick="setLang('jp')">JP</button>
+</div>
+
 <section class="hero"></section>
 
-<!-- BOTÕES -->
+<div class="text">
+  <h1 id="title">JDM DRIFT CARS</h1>
+  <p id="subtitle">Turbo / Manual / Export Ready</p>
+</div>
+
 <div class="float">
   <a href="#" class="line" onclick="toggleQR()">LINE</a>
   <a href="https://wa.me/819041616477" class="whatsapp">WhatsApp</a>
 </div>
 
-<!-- QR CODE -->
 <div class="qr" id="qrBox">
   <img src="line-qr.png.JPG">
 </div>
@@ -88,6 +73,16 @@ body{
 function toggleQR(){
   var qr = document.getElementById("qrBox");
   qr.style.display = qr.style.display === "block" ? "none" : "block";
+}
+
+function setLang(lang){
+  if(lang === "jp"){
+    document.getElementById("title").innerText = "JDM ドリフトカー";
+    document.getElementById("subtitle").innerText = "ターボ / マニュアル / 輸出対応";
+  } else {
+    document.getElementById("title").innerText = "JDM DRIFT CARS";
+    document.getElementById("subtitle").innerText = "Turbo / Manual / Export Ready";
+  }
 }
 </script>
 
