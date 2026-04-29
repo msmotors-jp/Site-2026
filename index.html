@@ -1,165 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MS Motors Japan</title>
 
 <style>
-body{
-  margin:0;
-  background:#000;
-  color:#fff;
-  font-family:Arial;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#fff;font-family:Arial,sans-serif}
+.hero{height:100vh;background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.2)),url('IMG_8233.jpeg') center/cover no-repeat;position:relative}
+.logo{position:absolute;top:25px;left:22px;width:150px;z-index:5}
+.lang{position:absolute;top:25px;right:22px;z-index:5}
+.lang button{background:#111;color:#fff;border:1px solid #777;padding:8px 12px;margin-left:6px}
+.hero-text{position:absolute;left:25px;top:28%;z-index:5}
+.hero-text h1{font-size:52px;line-height:1;font-weight:900}
+.hero-text span{color:#e60000}
+.hero-text p{margin-top:18px;font-size:22px}
+.btn{display:inline-block;margin-top:24px;background:#e60000;color:#fff;padding:14px 26px;text-decoration:none;font-weight:bold;border-radius:4px}
+.features{display:grid;grid-template-columns:repeat(4,1fr);background:#050505;border-top:1px solid #222;border-bottom:1px solid #222}
+.feature{text-align:center;padding:28px 10px;border-right:1px solid #222}
+.feature h3{color:#e60000;margin-bottom:10px}
+.section{padding:45px 20px;text-align:center}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.gallery img{width:100%;height:170px;object-fit:cover;border-radius:6px}
+.map iframe{width:100%;height:280px;border:0;border-radius:8px}
+.footer{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding:35px 20px;border-top:1px solid #222;background:#050505}
+.box{text-align:center}
+.box img{width:140px}
+.float{position:fixed;right:18px;bottom:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.float a{color:#fff;text-decoration:none;padding:13px 20px;border-radius:40px;font-weight:bold}
+.line{background:#00c300}
+.whatsapp{background:#25d366}
 
-/* HERO */
-.hero{
-  position:relative;
-  height:100vh;
-}
-
-.hero img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.overlay{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0));
-}
-
-.text{
-  position:absolute;
-  top:30%;
-  left:20px;
-}
-
-.text h1{
-  font-size:45px;
-  margin:0;
-}
-
-.text p{
-  color:#ccc;
-}
-
-.logo{
-  position:absolute;
-  top:20px;
-  left:20px;
-  width:140px;
-}
-
-/* BOTÕES */
-.buttons{
-  position:absolute;
-  bottom:30px;
-  left:20px;
-}
-
-.buttons a{
-  padding:12px 20px;
-  margin-right:10px;
-  border-radius:5px;
-  text-decoration:none;
-  color:#fff;
-  font-weight:bold;
-}
-
-.line{background:#00c300;}
-.whatsapp{background:#25D366;}
-
-/* FEATURES */
-.features{
-  display:flex;
-  justify-content:space-around;
-  padding:30px 10px;
-  border-top:1px solid #222;
-  border-bottom:1px solid #222;
-  text-align:center;
-}
-
-.features div{
-  font-size:13px;
-}
-
-/* GALERIA */
-.gallery{
-  padding:20px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-}
-
-.grid img{
-  width:100%;
-  border-radius:6px;
-}
-
-/* MAPA */
-.map{
-  padding:20px;
-}
-
-iframe{
-  width:100%;
-  height:250px;
-  border:0;
-}
-
-/* FOOTER */
-.footer{
-  padding:20px;
-  border-top:1px solid #222;
-  text-align:center;
-}
-
-.qr img{
-  width:150px;
+@media(max-width:700px){
+  .hero-text h1{font-size:42px}
+  .features{grid-template-columns:repeat(2,1fr)}
+  .footer{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <img src="hero.jpg.PNG">
-  <div class="overlay"></div>
-
+<section class="hero">
   <img src="logo.png.PNG" class="logo">
 
-  <div class="text">
-    <h1>JDM DRIFT CARS</h1>
-    <p>Japan Quality</p>
+  <div class="lang">
+    <button>EN</button>
+    <button>JP</button>
   </div>
 
-  <div class="buttons">
-    <a href="#qr" class="line">LINE</a>
-    <a href="https://wa.me/819041616477" class="whatsapp">WhatsApp</a>
+  <div class="hero-text">
+    <h1>JDM<br><span>DRIFT</span><br>CARS</h1>
+    <p>Japan Quality.</p>
+    <a class="btn" href="https://wa.me/819041616477">WhatsApp</a>
   </div>
-</div>
+</section>
 
-<!-- FEATURES -->
-<div class="features">
-  <div>🚗 JDM Performance</div>
-  <div>⚙️ Custom Support</div>
-  <div>🤝 Trusted Deals</div>
-  <div>🌍 Export Ready</div>
-</div>
+<section class="features">
+  <div class="feature"><h3>JDM</h3><p>Performance Cars</p></div>
+  <div class="feature"><h3>Custom</h3><p>Drift Support</p></div>
+  <div class="feature"><h3>Trusted</h3><p>Real Stock</p></div>
+  <div class="feature"><h3>Japan</h3><p>Quality</p></div>
+</section>
 
-<!-- GALERIA -->
-<div class="gallery">
-  <div class="grid">
+<section class="section">
+  <h2>Gallery</h2><br>
+  <div class="gallery">
     <img src="car1.jpg.JPG">
     <img src="car2.jpg.HEIC">
     <img src="car3.jpg.HEIC">
@@ -171,22 +78,34 @@ iframe{
     <img src="car9.jpg.HEIC">
     <img src="car10.jpg.jpg">
   </div>
-</div>
+</section>
 
-<!-- MAPA -->
-<div class="map">
-  <h3>Location</h3>
-  <p>長野県東筑摩郡朝日村西洗馬410-1</p>
+<section class="section map">
+  <h2>所在地</h2><br>
+  <p>〒390-1101<br>長野県東筑摩郡朝日村西洗馬410-1</p><br>
   <iframe src="https://maps.google.com/maps?q=長野県東筑摩郡朝日村西洗馬410-1&output=embed"></iframe>
-</div>
+</section>
 
-<!-- FOOTER -->
-<div class="footer">
-  <div id="qr" class="qr">
-    <h3>LINE QR</h3>
+<section class="footer">
+  <div class="box">
+    <h3>CarSensor</h3><br>
+    <a class="btn" href="https://www.carsensor.net/shop/nagano/329830001/?BKKN=AU6729676253&fed=othshoplinkb20190809001ns">在庫を見る</a>
+  </div>
+
+  <div class="box">
+    <h3>LINE QR</h3><br>
     <img src="line-qr.png.JPG">
   </div>
-  <p>© MS Motors Japan</p>
+
+  <div class="box">
+    <h3>Instagram</h3><br>
+    <a class="btn" href="https://instagram.com/msmotors_oficial">@msmotors_oficial</a>
+  </div>
+</section>
+
+<div class="float">
+  <a class="line" href="#line">LINE</a>
+  <a class="whatsapp" href="https://wa.me/819041616477">WhatsApp</a>
 </div>
 
 </body>
