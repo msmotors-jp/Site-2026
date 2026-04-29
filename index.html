@@ -7,22 +7,24 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;color:#fff;font-family:Arial}
+body{background:#000;color:#fff;font-family:Arial,sans-serif}
+a{text-decoration:none;color:#fff}
 
 .hero{
   height:100vh;
   position:relative;
   background:
-    linear-gradient(to right,rgba(0,0,0,.65),rgba(0,0,0,.2)),
-    url("hero.jpg") center/cover no-repeat;
+    linear-gradient(to right,rgba(0,0,0,.55),rgba(0,0,0,.15)),
+    url("46BFE8F9-A211-4E9E-BA87-77DE3C198A12.png") center/cover no-repeat;
 }
 
 .logo{
   position:absolute;
   top:25px;
   left:25px;
-  width:140px;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
+  width:150px;
+  height:auto;
+  filter:drop-shadow(0 2px 6px #000);
 }
 
 .lang{
@@ -30,194 +32,188 @@ body{background:#000;color:#fff;font-family:Arial}
   top:25px;
   right:25px;
 }
-
 .lang button{
-  background:#111;
+  background:rgba(0,0,0,.7);
   color:#fff;
-  border:1px solid #777;
+  border:1px solid #fff;
   padding:8px 12px;
   margin-left:6px;
 }
 
 .hero-text{
   position:absolute;
-  left:30px;
-  bottom:90px;
+  left:28px;
+  bottom:110px;
 }
-
 .hero-text h1{
-  font-size:48px;
+  font-size:46px;
+  line-height:1.05;
   font-weight:900;
 }
-
-.hero-text span{
-  color:#ff2a2a;
-}
-
-.hero-text p{
-  margin-top:10px;
-  color:#ccc;
-}
+.hero-text span{color:#e60000}
+.hero-text p{font-size:22px;margin-top:15px}
 
 .btn{
   display:inline-block;
-  margin-top:20px;
-  padding:12px 20px;
+  padding:14px 22px;
   border-radius:6px;
   font-weight:bold;
+  margin-top:20px;
+}
+.red{background:#d9251d}
+.green{background:#32c84b}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid #222;
+  border-bottom:1px solid #222;
+}
+.feature{
+  text-align:center;
+  padding:24px 8px;
+  border-right:1px solid #222;
+}
+.feature h3{color:#d9251d;margin-bottom:8px}
+
+.section{
+  padding:35px 18px;
+  text-align:center;
 }
 
-.red{background:#e00000;color:#fff}
-.green{background:#00c300;color:#fff}
-
-/* GALERIA */
 .gallery{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:8px;
-  padding:20px;
 }
-
 .gallery img{
   width:100%;
+  height:170px;
+  object-fit:cover;
   border-radius:6px;
 }
 
-/* MAPA */
-.map{
-  padding:20px;
+iframe{
+  width:100%;
+  height:280px;
+  border:0;
+  border-radius:8px;
 }
 
-/* CAR SENSOR */
-.center{
-  text-align:center;
-  padding:30px;
+.footer{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  padding:30px 18px;
+  border-top:1px solid #222;
 }
+.box{text-align:center}
+.qr{width:130px}
 
-.center a{
-  display:inline-block;
-  background:#ff3c00;
-  padding:14px 20px;
-  border-radius:6px;
-  color:#fff;
-  margin-top:10px;
-}
-
-/* QR */
-.qr{
-  width:160px;
-  margin:20px auto;
-  display:block;
-}
-
-/* CONTATO */
-.contact{
+.float{
+  position:fixed;
+  right:18px;
+  bottom:22px;
   display:flex;
   flex-direction:column;
   gap:10px;
-  align-items:center;
-  padding:20px;
+  z-index:99;
 }
-
-.instagram{
-  background:#e00000;
-  padding:12px 20px;
-  border-radius:6px;
-}
-
-/* RODAPÉ */
-footer{
+.float a{
+  padding:13px 22px;
+  border-radius:40px;
+  font-weight:bold;
   text-align:center;
-  padding:20px;
-  color:#aaa;
+}
+
+.copy{
+  text-align:center;
+  padding:18px;
+  color:#888;
+  font-size:13px;
+}
+
+@media(max-width:700px){
+  .hero-text h1{font-size:42px}
+  .features{grid-template-columns:repeat(2,1fr)}
+  .footer{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
 
-<img src="logo.png" class="logo">
+<img src="7EA47DE1-F50E-4A8D-B88B-34E002C5BCDF.png" class="logo">
 
 <div class="lang">
-  <button>EN</button>
-  <button>JP</button>
+<button>EN</button>
+<button>JP</button>
 </div>
 
 <div class="hero-text">
-  <h1>JDM <span>DRIFT</span><br>CARS</h1>
-  <p>Japan Quality.</p>
-
-  <a href="https://wa.me/819041616477" class="btn red">WhatsApp</a>
+<h1>JDM <span>DRIFT</span><br>CARS</h1>
+<p>Japan Quality.</p>
+<a class="btn red" href="https://wa.me/819041616477">WhatsApp</a>
 </div>
 
 </section>
 
-<!-- GALERIA -->
-<section class="gallery">
-<img src="car1.jpg">
-<img src="car2.jpg">
-<img src="car3.jpg">
-<img src="car4.jpg">
-<img src="car5.jpg">
-<img src="car6.jpg">
-<img src="car7.jpg">
-<img src="car8.jpg">
-<img src="car9.jpg">
-<img src="car10.jpg">
+<section class="features">
+<div class="feature"><h3>ターボ車専門店</h3><p>高品質なJDM車を厳選</p></div>
+<div class="feature"><h3>整備・カスタム</h3><p>自社工場完備で安心</p></div>
+<div class="feature"><h3>安心取引</h3><p>国内外のお客様に対応</p></div>
+<div class="feature"><h3>輸出対応</h3><p>海外のお客様も相談可</p></div>
 </section>
 
-<!-- LOCAL -->
-<section class="map">
-<h2>所在地</h2>
-<p>〒390-1101<br>長野県東筑摩郡朝日村西洗馬410-1</p>
-<br>
-<a href="https://maps.google.com" target="_blank" class="btn red">Google Mapsで見る</a>
+<section class="section">
+<h2>Gallery</h2><br>
+<div class="gallery">
+<img src="IMG_0487.jpeg">
+<img src="IMG_1248.jpeg">
+<img src="IMG_4007.jpeg">
+<img src="IMG_6080.jpeg">
+<img src="IMG_6863.jpeg">
+<img src="IMG_6963.jpeg">
+<img src="IMG_7650.jpeg">
+<img src="IMG_8500.jpeg">
+<img src="IMG_8521.jpeg">
+<img src="IMG_9382.jpeg">
+</div>
 </section>
 
-<!-- GOO NET -->
-<section class="center">
-<h2>在庫を見る</h2>
-<p>最新の在庫はGoo-netで確認できます</p>
-
-<a href="https://www.goo-net.com/php/shop/stock.php?client_id=1201441&area_id=14&baitai=goo" target="_blank">
-Goo-netで在庫を見る
-</a>
+<section class="section">
+<h2>所在地</h2><br>
+<p>〒390-1101<br>長野県東筑摩郡朝日村西洗馬410-1</p><br>
+<iframe src="https://maps.google.com/maps?q=長野県東筑摩郡朝日村西洗馬410-1&output=embed"></iframe>
 </section>
 
-<!-- CAR SENSOR -->
-<section class="center">
-<h2>CarSensor</h2>
+<section class="footer">
 
-<a href="#">
-在庫を見る
-</a>
+<div class="box">
+<h3>Goo-net</h3><br>
+<a class="btn red" href="https://www.goo-net.com/php/shop/stock.php?client_id=1201441&area_id=14&baitai=goo" target="_blank">在庫を見る</a>
+</div>
+
+<div class="box">
+<h3>LINE QR</h3><br>
+<img src="line-qr.png.JPG" class="qr">
+</div>
+
+<div class="box">
+<h3>Instagram</h3><br>
+<a class="btn red" href="https://instagram.com/msmotors_oficial" target="_blank">@msmotors_oficial</a>
+</div>
+
 </section>
 
-<!-- LINE QR -->
-<section class="center">
-<h2>LINE QRコード</h2>
+<div class="float">
+<a class="green" href="#">LINE</a>
+<a class="green" href="https://wa.me/819041616477">WhatsApp</a>
+</div>
 
-<img src="line-qr.jpg" class="qr">
-</section>
-
-<!-- CONTATO -->
-<section class="contact">
-<h2>Instagram</h2>
-
-<a href="https://instagram.com/msmotors_oficial" class="instagram">
-@msmotors_oficial
-</a>
-
-<a href="#" class="btn green">LINE</a>
-<a href="https://wa.me/819041616477" class="btn green">WhatsApp</a>
-</section>
-
-<footer>
-© MS Motors Japan
-</footer>
+<div class="copy">© MS Motors Japan</div>
 
 </body>
 </html>
