@@ -17,50 +17,15 @@ body {
 .hero {
   position:relative;
   height:90vh;
-  overflow:hidden;
 }
 
-.hero img {
+.hero img.bg {
   width:100%;
   height:100%;
   object-fit:cover;
   filter:brightness(0.6);
 }
 
-.hero-text {
-  position:absolute;
-  top:30%;
-  left:20px;
-}
-
-.hero-text h1 {
-  font-size:50px;
-  margin:0;
-}
-
-.hero-text span {
-  color:red;
-}
-
-.btn {
-  padding:12px 20px;
-  border:none;
-  margin-top:15px;
-  font-weight:bold;
-  border-radius:5px;
-}
-
-.whatsapp {
-  background:red;
-  color:white;
-}
-
-.line {
-  background:#00c300;
-  color:white;
-}
-
-/* LOGO */
 .logo {
   position:absolute;
   top:10px;
@@ -68,7 +33,6 @@ body {
   width:150px;
 }
 
-/* LANGUAGE */
 .lang {
   position:absolute;
   top:10px;
@@ -79,16 +43,39 @@ body {
   background:#000;
   color:#fff;
   border:1px solid #fff;
-  margin:2px;
   padding:5px 10px;
 }
+
+.text {
+  position:absolute;
+  top:35%;
+  left:20px;
+}
+
+.text h1 {
+  font-size:45px;
+}
+
+.text span {
+  color:red;
+}
+
+.btn {
+  padding:12px 20px;
+  border:none;
+  margin:10px 5px 0 0;
+  border-radius:5px;
+  font-weight:bold;
+}
+
+.whatsapp {background:red;color:white;}
+.line {background:#00c300;color:white;}
 
 /* FEATURES */
 .features {
   display:flex;
   justify-content:space-around;
-  text-align:center;
-  padding:20px;
+  padding:15px;
   border-top:1px solid #333;
   border-bottom:1px solid #333;
 }
@@ -106,7 +93,7 @@ body {
   border-radius:5px;
 }
 
-/* LOCATION */
+/* MAP */
 .map {
   padding:20px;
 }
@@ -115,7 +102,6 @@ body {
 .footer {
   text-align:center;
   padding:20px;
-  border-top:1px solid #333;
 }
 </style>
 
@@ -124,16 +110,16 @@ body {
 
 <!-- HERO -->
 <section class="hero">
-  <img src="hero.jpg">
+  <img src="hero.jpg.PNG" class="bg">
 
-  <img src="logo.png" class="logo">
+  <img src="logo.png.PNG" class="logo">
 
   <div class="lang">
     <button>EN</button>
     <button>JP</button>
   </div>
 
-  <div class="hero-text">
+  <div class="text">
     <h1>JDM <span>DRIFT</span> CARS</h1>
     <p>Japan Quality.</p>
 
@@ -152,19 +138,18 @@ body {
 
 <!-- GALLERY -->
 <section class="gallery">
-  <img src="car1.jpg">
-  <img src="car2.jpg">
-  <img src="car3.jpg">
-  <img src="car4.jpg">
-  <img src="car5.jpg">
-  <img src="car6.jpg">
-  <img src="car7.jpg">
-  <img src="car8.jpg">
-  <img src="car9.jpg">
-  <img src="car10.jpg">
+  <img src="car1.jpg.JPG">
+  <img src="car10.jpg.jpg">
+  <img src="car3.jpg.HEIC">
+  <img src="car4.jpg.HEIC">
+  <img src="car5.jpg.HEIC">
+  <img src="car6.jpg.HEIC">
+  <img src="car7.jpg.HEIC">
+  <img src="car8.jpg.HEIC">
+  <img src="car9.jpg.HEIC">
 </section>
 
-<!-- LOCATION -->
+<!-- MAP -->
 <section class="map">
   <h2>所在地</h2>
   <p>〒390-1101 長野県東筑摩郡朝日村西洗馬410-1</p>
@@ -177,7 +162,7 @@ body {
 
 <!-- FOOTER -->
 <section class="footer">
-  <img src="line-qr.png" width="120"><br><br>
+  <img src="line-qr.png.JPG" width="120"><br><br>
   © MS Motors Japan
 </section>
 
