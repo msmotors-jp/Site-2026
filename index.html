@@ -8,20 +8,23 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#000;color:#fff;font-family:Arial,sans-serif}
-a{text-decoration:none;color:#fff}
+a{text-decoration:none;color:white}
 
 .hero{
-  min-height:82vh;
+  height:100vh;
   background:
-    linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.35)),
-    url("IMG_9382.jpeg") center/cover no-repeat;
+    linear-gradient(to right,rgba(0,0,0,.75),rgba(0,0,0,.15)),
+    url("46BFE8F9-A211-4E9E-BA87-77DE3C198A12.png") center/cover no-repeat;
   position:relative;
-  padding:28px;
 }
+
 .logo{
-  width:150px;
-  max-width:45%;
+  position:absolute;
+  top:25px;
+  left:25px;
+  width:170px;
 }
+
 .lang{
   position:absolute;
   top:25px;
@@ -30,31 +33,36 @@ a{text-decoration:none;color:#fff}
 .lang button{
   background:#111;
   color:#fff;
-  border:1px solid #777;
+  border:1px solid #fff;
   padding:8px 12px;
   margin-left:6px;
 }
+
 .hero-text{
   position:absolute;
-  left:28px;
-  bottom:90px;
+  left:30px;
+  bottom:120px;
 }
 .hero-text h1{
   font-size:52px;
   line-height:1;
   font-weight:900;
 }
-.hero-text span{color:#e60000}
-.hero-text p{font-size:22px;margin-top:18px}
+.hero-text span{color:red}
+.hero-text p{
+  font-size:22px;
+  margin-top:15px;
+}
+
 .btn{
   display:inline-block;
-  margin-top:20px;
   padding:14px 24px;
+  margin-top:20px;
   border-radius:5px;
   font-weight:bold;
 }
 .red{background:#d90000}
-.green{background:#00b900}
+.green{background:#00c300}
 
 .features{
   display:grid;
@@ -64,12 +72,15 @@ a{text-decoration:none;color:#fff}
 }
 .feature{
   text-align:center;
-  padding:26px 8px;
+  padding:25px 8px;
   border-right:1px solid #222;
 }
-.feature h3{color:#e60000;margin-bottom:8px}
+.feature h3{color:red;margin-bottom:8px}
 
-.section{padding:35px 18px;text-align:center}
+.section{
+  padding:35px 18px;
+  text-align:center;
+}
 .gallery{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -82,7 +93,7 @@ a{text-decoration:none;color:#fff}
   border-radius:6px;
 }
 
-.map iframe{
+iframe{
   width:100%;
   height:280px;
   border:0;
@@ -112,7 +123,6 @@ a{text-decoration:none;color:#fff}
   padding:13px 20px;
   border-radius:40px;
   font-weight:bold;
-  text-align:center;
 }
 
 .copy{
@@ -136,26 +146,26 @@ a{text-decoration:none;color:#fff}
   <img src="logo.png.PNG" class="logo">
 
   <div class="lang">
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('jp')">JP</button>
+    <button>EN</button>
+    <button>JP</button>
   </div>
 
   <div class="hero-text">
-    <h1 id="title">JDM <span>DRIFT</span><br>CARS</h1>
-    <p id="subtitle">Japan Quality.</p>
+    <h1>JDM <span>DRIFT</span><br>CARS</h1>
+    <p>Japan Quality.</p>
     <a class="btn red" href="https://wa.me/819041616477">WhatsApp</a>
   </div>
 </section>
 
 <section class="features">
-  <div class="feature"><h3 id="f1">ターボ車専門店</h3><p>高品質なJDM車を厳選</p></div>
-  <div class="feature"><h3 id="f2">整備・カスタム</h3><p>自社工場完備で安心</p></div>
-  <div class="feature"><h3 id="f3">安心取引</h3><p>国内外のお客様に対応</p></div>
-  <div class="feature"><h3 id="f4">輸出サポート</h3><p>海外のお客様も相談可</p></div>
+  <div class="feature"><h3>ターボ車専門店</h3><p>高品質なJDM車を厳選</p></div>
+  <div class="feature"><h3>整備・カスタム</h3><p>自社工場完備で安心</p></div>
+  <div class="feature"><h3>安心取引</h3><p>国内外のお客様に対応</p></div>
+  <div class="feature"><h3>輸出サポート</h3><p>海外のお客様も相談可</p></div>
 </section>
 
 <section class="section">
-  <h2 id="galleryTitle">Gallery</h2><br>
+  <h2>Gallery</h2><br>
   <div class="gallery">
     <img src="IMG_0487.jpeg">
     <img src="IMG_1248.jpeg">
@@ -170,8 +180,8 @@ a{text-decoration:none;color:#fff}
   </div>
 </section>
 
-<section class="section map">
-  <h2 id="location">所在地</h2><br>
+<section class="section">
+  <h2>所在地</h2><br>
   <p>〒390-1101<br>長野県東筑摩郡朝日村西洗馬410-1</p><br>
   <iframe src="https://maps.google.com/maps?q=長野県東筑摩郡朝日村西洗馬410-1&output=embed"></iframe>
 </section>
@@ -201,30 +211,6 @@ a{text-decoration:none;color:#fff}
 <div class="copy">
   © MS Motors Japan
 </div>
-
-<script>
-function setLang(lang){
-  if(lang === "en"){
-    document.getElementById("title").innerHTML = "JDM <span>DRIFT</span><br>CARS";
-    document.getElementById("subtitle").innerText = "Japan Quality.";
-    document.getElementById("galleryTitle").innerText = "Gallery";
-    document.getElementById("location").innerText = "Location";
-    document.getElementById("f1").innerText = "JDM Performance";
-    document.getElementById("f2").innerText = "Custom Support";
-    document.getElementById("f3").innerText = "Trusted Deals";
-    document.getElementById("f4").innerText = "Export Support";
-  }else{
-    document.getElementById("title").innerHTML = "JDM <span>ドリフト</span><br>カー";
-    document.getElementById("subtitle").innerText = "日本品質。";
-    document.getElementById("galleryTitle").innerText = "ギャラリー";
-    document.getElementById("location").innerText = "所在地";
-    document.getElementById("f1").innerText = "ターボ車専門店";
-    document.getElementById("f2").innerText = "整備・カスタム";
-    document.getElementById("f3").innerText = "安心取引";
-    document.getElementById("f4").innerText = "輸出サポート";
-  }
-}
-</script>
 
 </body>
 </html>
