@@ -7,207 +7,174 @@
 
 <style>
 body{
-  margin:0;
-  background:#000;
-  color:white;
-  font-family:Arial;
+    margin:0;
+    font-family:Arial;
+    background:#000;
+    color:#fff;
 }
 
-/* HERO SLIDER */
-.hero{
-  height:100vh;
-  position:relative;
-  overflow:hidden;
+header{
+    position:absolute;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    z-index:10;
 }
 
-.hero img{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  opacity:0;
-  animation:slide 18s infinite;
+header img{
+    height:40px;
 }
 
-.hero img:nth-child(1){animation-delay:0s;}
-.hero img:nth-child(2){animation-delay:6s;}
-.hero img:nth-child(3){animation-delay:12s;}
-
-@keyframes slide{
-  0%{opacity:0;}
-  10%{opacity:1;}
-  30%{opacity:1;}
-  40%{opacity:0;}
-  100%{opacity:0;}
-}
-
-/* overlay */
-.hero::after{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.6);
-}
-
-/* TEXTO */
-.text{
-  position:absolute;
-  top:45%;
-  width:100%;
-  text-align:center;
-  z-index:5;
-}
-
-.text h1{font-size:36px;}
-.text p{font-size:18px;}
-
-/* LOGO */
-.logo{
-  position:fixed;
-  top:20px;
-  left:20px;
-  height:40px;
-  z-index:10;
-}
-
-/* IDIOMA */
-.lang{
-  position:fixed;
-  top:20px;
-  right:20px;
-  z-index:10;
-}
 .lang button{
-  background:#111;
-  color:white;
-  border:1px solid white;
-  padding:8px 12px;
+    background:transparent;
+    border:1px solid #fff;
+    color:#fff;
+    padding:5px 10px;
+    margin-left:5px;
 }
 
-/* BOTÕES */
-.float{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  z-index:10;
+.hero{
+    height:100vh;
+    background:url('hero.jpg') center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
-.float a{
-  padding:12px 20px;
-  border-radius:30px;
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-}
-.line{background:#00c300;}
-.whatsapp{background:#25D366;}
 
-/* QR */
-.qr{
-  display:none;
-  position:fixed;
-  right:20px;
-  bottom:100px;
-  background:#000;
-  padding:10px;
-  border-radius:10px;
-  z-index:10;
+.hero h1{
+    font-size:60px;
 }
-.qr img{width:150px;}
 
-/* MAP */
-.map{
-  padding:40px;
-  text-align:center;
+.btn{
+    background:red;
+    padding:15px 30px;
+    margin-top:20px;
+    text-decoration:none;
+    color:#fff;
+    display:inline-block;
 }
+
+.slider{
+    display:flex;
+    overflow-x:auto;
+    gap:10px;
+    padding:20px;
+}
+
+.slider img{
+    width:300px;
+    border-radius:10px;
+}
+
+.section{
+    padding:40px 20px;
+    text-align:center;
+}
+
 iframe{
-  width:100%;
-  height:300px;
-  border:0;
+    width:100%;
+    height:300px;
+    border:0;
 }
 
-/* PARTNERS */
-.partners{
-  text-align:center;
-  padding:30px;
+.footer{
+    background:#111;
+    padding:20px;
+    text-align:center;
 }
-.partners a{
-  color:white;
-  font-weight:bold;
+
+.line-qr{
+    width:150px;
 }
 </style>
 </head>
 
 <body>
 
-<img src="logo.png.PNG" class="logo">
-
+<header>
+<img src="logo.png">
 <div class="lang">
 <button onclick="setLang('en')">EN</button>
 <button onclick="setLang('jp')">JP</button>
 </div>
+</header>
 
 <section class="hero">
+<h1 id="title">JDM DRIFT CARS</h1>
+<p id="subtitle">Japan Quality</p>
 
-<img src="hero.jpg.PNG">
-<img src="car1.jpg">
-<img src="car2.jpg">
+<a href="https://wa.me/819041616477" class="btn">WhatsApp</a>
+</section>
 
-<div class="text">
-  <h1 id="title">JDM DRIFT CARS</h1>
-  <p id="subtitle">Japan Quality</p>
+<section class="section">
+<h2>Gallery</h2>
+
+<div class="slider">
+
+<img src="IMG_8233.jpeg">
+<img src="file1.jpg">
+<img src="file2.jpg">
+<img src="file3.jpg">
+<img src="file4.jpg">
+<img src="file5.jpg">
+<img src="file6.jpg">
+<img src="file7.jpg">
+<img src="file8.jpg">
+
 </div>
 
 </section>
 
-<div class="map">
+<section class="section">
 <h2 id="location">Location</h2>
-<iframe src="https://www.google.com/maps?q=長野県東筑摩郡朝日村西洗馬410-1&output=embed"></iframe>
-</div>
 
-<!-- CAR SENSOR -->
-<div class="partners">
-  <h2 id="partners">Partners</h2>
+<p>
+〒390-1101<br>
+長野県東筑摩郡朝日村西洗馬410-1
+</p>
 
-  <p>
-    <a href="https://www.carsensor.net/shop/nagano/329830001/?BKKN=AU6729676253&fed=othshoplinkb20190809001ns" target="_blank">
-      CarSensor
-    </a>
-  </p>
-</div>
+<iframe src="https://maps.google.com/maps?q=朝日村西洗馬410-1&output=embed"></iframe>
+</section>
 
-<!-- BOTÕES -->
-<div class="float">
-  <a href="#" class="line" onclick="toggleQR()">LINE</a>
-  <a href="https://wa.me/819041616477" class="whatsapp">WhatsApp</a>
-</div>
+<section class="section">
+<h2>Contact</h2>
 
-<!-- QR -->
-<div class="qr" id="qrBox">
-  <img src="line-qr.png.JPG">
-</div>
+<a href="https://line.me/ti/p/09041616477" class="btn">LINE</a>
+
+<br><br>
+
+<img src="line-qr.jpg" class="line-qr">
+
+</section>
+
+<section class="section">
+<h2>CarSensor</h2>
+
+<a href="https://www.carsensor.net/shop/nagano/329830001/?BKKN=AU6729676253" class="btn">
+View Inventory
+</a>
+</section>
+
+<footer class="footer">
+© MS Motors Japan
+</footer>
 
 <script>
-function toggleQR(){
-  var qr = document.getElementById("qrBox");
-  qr.style.display = qr.style.display === "block" ? "none" : "block";
-}
-
 function setLang(lang){
-  if(lang==="jp"){
-    document.getElementById("title").innerText="JDM ドリフトカー";
-    document.getElementById("subtitle").innerText="日本品質";
-    document.getElementById("location").innerText="所在地";
-    document.getElementById("partners").innerText="提携先";
-  } else {
-    document.getElementById("title").innerText="JDM DRIFT CARS";
-    document.getElementById("subtitle").innerText="Japan Quality";
-    document.getElementById("location").innerText="Location";
-    document.getElementById("partners").innerText="Partners";
-  }
+    if(lang === 'jp'){
+        document.getElementById('title').innerText = "JDM ドリフトカー";
+        document.getElementById('subtitle').innerText = "日本品質";
+        document.getElementById('location').innerText = "所在地";
+    }else{
+        document.getElementById('title').innerText = "JDM DRIFT CARS";
+        document.getElementById('subtitle').innerText = "Japan Quality";
+        document.getElementById('location').innerText = "Location";
+    }
 }
 </script>
 
