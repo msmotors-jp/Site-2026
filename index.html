@@ -1,199 +1,194 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MS Motors Japan</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;color:#fff;font-family:Arial}
+body{
+  margin:0;
+  font-family:Arial;
+  background:#000;
+  color:#fff;
+}
 
+/* HERO */
 .hero{
-  min-height:100vh;
   position:relative;
-  background:
-    linear-gradient(to right,rgba(0,0,0,.65),rgba(0,0,0,.2)),
-    url("46BFE8F9-A211-4E9E-BA87-77DE3C198A12.png") center/cover no-repeat;
+  height:100vh;
+  background:url("capa.jpg") center/cover no-repeat;
 }
 
-.logo{
-  position:absolute;
-  top:20px;
-  left:20px;
-  width:150px;
-}
-
+/* BOTÕES IDIOMA */
 .lang{
   position:absolute;
   top:20px;
   right:20px;
 }
-
 .lang button{
-  background:rgba(0,0,0,.6);
-  color:#fff;
+  background:transparent;
   border:1px solid #fff;
-  padding:6px 10px;
+  color:#fff;
+  padding:8px 12px;
   margin-left:5px;
 }
 
-.text{
-  position:absolute;
-  bottom:90px;
-  left:20px;
+/* BOTÕES FIXOS */
+.float{
+  position:fixed;
+  right:10px;
+  bottom:80px;
 }
-
-h1{
-  font-size:42px;
-  font-weight:900;
-}
-
-span{color:red}
-
-.btn{
-  display:inline-block;
-  margin-top:15px;
+.float a{
+  display:block;
+  margin:10px 0;
   padding:12px 20px;
-  background:red;
-  border-radius:5px;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.line{
+  background:#00c300;
+  color:#fff;
+}
+.whatsapp{
+  background:#25D366;
+  color:#fff;
 }
 
+/* GALERIA */
 .section{
-  padding:30px 15px;
+  padding:20px;
   text-align:center;
 }
-
 .gallery{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:6px;
+  gap:10px;
 }
-
 .gallery img{
   width:100%;
-  height:140px;
-  object-fit:cover;
+  border-radius:10px;
 }
 
+/* MAPA */
 iframe{
   width:100%;
   height:250px;
   border:0;
-  margin-top:15px;
+  border-radius:10px;
 }
 
-.links{
+/* BOXES */
+.footer{
   display:grid;
-  grid-template-columns:1fr;
-  gap:20px;
-  padding:30px 15px;
-}
-
-.qr{
-  width:150px;
-}
-
-.float{
-  position:fixed;
-  right:15px;
-  bottom:20px;
-  display:flex;
-  flex-direction:column;
+  grid-template-columns:repeat(2,1fr);
   gap:10px;
+  padding:20px;
+}
+.box{
+  background:#111;
+  padding:15px;
+  border-radius:10px;
+  text-align:center;
+}
+.box img{
+  width:80px;
 }
 
-.green{
-  background:#00c300;
-  padding:10px 20px;
-  border-radius:30px;
+/* BOTÕES */
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 15px;
+  background:red;
+  color:#fff;
+  text-decoration:none;
+  border-radius:5px;
 }
 
+/* COPYRIGHT */
 .copy{
   text-align:center;
-  padding:15px;
-  color:#888;
+  padding:20px;
+  color:#aaa;
 }
 </style>
+
 </head>
 
 <body>
 
-<section class="hero">
-
-<img src="7EA47DE1-F50E-4A8D-B88B-34E002C5BCDF.png" class="logo">
-
-<div class="lang">
-<button>EN</button>
-<button>JP</button>
+<!-- HERO -->
+<div class="hero">
+  <div class="lang">
+    <button>EN</button>
+    <button>JP</button>
+  </div>
 </div>
 
-<div class="text">
-<h1>JDM <span>DRIFT</span><br>CARS</h1>
-<p>Japan Quality.</p>
-<a class="btn" href="https://wa.me/819041616477">WhatsApp</a>
-</div>
-
-</section>
-
-<section class="section">
-<h2>Gallery</h2>
-
-<div class="gallery">
-<img src="IMG_0487.jpeg">
-<img src="IMG_1248.jpeg">
-<img src="IMG_4007.jpeg">
-<img src="IMG_6080.jpeg">
-<img src="IMG_6863.jpeg">
-<img src="IMG_6963.jpeg">
-<img src="IMG_7650.jpeg">
-<img src="IMG_8500.jpeg">
-<img src="IMG_8521.jpeg">
-<img src="IMG_9382.jpeg">
-</div>
-</section>
-
-<section class="section">
-<h2>所在地</h2>
-<p>〒390-1101<br>長野県東筑摩郡朝日村西洗馬410-1</p>
-
-<iframe src="https://maps.google.com/maps?q=長野県東筑摩郡朝日村西洗馬410-1&output=embed"></iframe>
-</section>
-
-<section class="links">
-
-<div>
-<h3>Goo-net</h3>
-<a class="btn" href="https://www.goo-net.com/php/shop/stock.php?client_id=1201441&area_id=14&baitai=goo">
-在庫を見る
-</a>
-</div>
-
-<div>
-<h3>CarSensor</h3>
-<a class="btn" href="https://www.carsensor.net/">
-在庫を見る
-</a>
-</div>
-
-<div>
-<h3>LINE QR</h3>
-<br>
-<img src="Image-1.jpeg" class="qr">
-</div>
-
-<div>
-<h3>Instagram</h3>
-<a class="btn" href="https://instagram.com/msmotors_oficial">
-@msmotors_oficial
-</a>
-</div>
-
-</section>
-
+<!-- BOTÕES FIXOS -->
 <div class="float">
-<a class="green" href="#">LINE</a>
-<a class="green" href="https://wa.me/819041616477">WhatsApp</a>
+  <a class="line" href="#">LINE</a>
+  <a class="whatsapp" href="https://wa.me/819041616477">WhatsApp</a>
+</div>
+
+<!-- GALERIA -->
+<div class="section">
+  <h2>GALLERY</h2>
+
+  <div class="gallery">
+    <img src="IMG_1.jpg">
+    <img src="IMG_2.jpg">
+    <img src="IMG_3.jpg">
+    <img src="IMG_4.jpg">
+    <img src="IMG_5.jpg">
+    <img src="IMG_6.jpg">
+  </div>
+
+  <a class="btn">VIEW MORE</a>
+</div>
+
+<!-- MAPA -->
+<div class="section">
+  <iframe src="https://maps.google.com/maps?q=長野県東筑摩郡朝日村西洗馬410-1&output=embed"></iframe>
+
+  <p>〒390-1101<br>
+  長野県東筑摩郡朝日村西洗馬410-1</p>
+
+  <a class="btn">GOOGLE MAPSで見る</a>
+</div>
+
+<!-- FOOTER BOXES -->
+<div class="footer">
+
+  <div class="box">
+    <h3>Goo-net</h3>
+    <img src="goonet.png">
+    <br>
+    <a class="btn">在庫を見る</a>
+  </div>
+
+  <div class="box">
+    <h3>CarSensor</h3>
+    <img src="carsensor.png">
+    <br>
+    <a class="btn">在庫を見る</a>
+  </div>
+
+  <div class="box">
+    <h3>LINE QR</h3>
+    <img src="lineqr.jpg">
+  </div>
+
+  <div class="box">
+    <h3>Instagram</h3>
+    <img src="insta.png">
+    <br>
+    <a class="btn">@msmotors_oficial</a>
+  </div>
+
 </div>
 
 <div class="copy">© MS Motors Japan</div>
