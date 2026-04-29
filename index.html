@@ -17,7 +17,61 @@ body{
 .hero{
   position:relative;
   height:100vh;
-  background:url("IMG_0487.jpeg") center/cover no-repeat;
+  background:url("BFE8F9-A211-4E9E-BA87-77DE3C198A12.png") center/cover no-repeat;
+}
+
+/* ESCURECER FUNDO */
+.hero::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  top:0;
+  left:0;
+}
+
+/* CONTEÚDO SOBRE A IMAGEM */
+.hero-content{
+  position:absolute;
+  top:50%;
+  left:20px;
+  transform:translateY(-50%);
+  z-index:2;
+}
+
+/* LOGO */
+.logo{
+  width:180px;
+  margin-bottom:20px;
+}
+
+/* TEXTO */
+.title{
+  font-size:40px;
+  font-weight:bold;
+  line-height:1.1;
+}
+
+.title span{
+  color:red;
+}
+
+/* SUBTEXTO */
+.subtitle{
+  margin-top:10px;
+  color:#ccc;
+}
+
+/* BOTÃO */
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 20px;
+  background:red;
+  color:#fff;
+  text-decoration:none;
+  border-radius:5px;
 }
 
 /* IDIOMA */
@@ -25,6 +79,7 @@ body{
   position:absolute;
   top:20px;
   right:20px;
+  z-index:2;
 }
 .lang button{
   background:transparent;
@@ -56,64 +111,6 @@ body{
   background:#25D366;
   color:#fff;
 }
-
-/* GALERIA */
-.section{
-  padding:20px;
-  text-align:center;
-}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-}
-.gallery img{
-  width:100%;
-  border-radius:10px;
-}
-
-/* MAPA */
-iframe{
-  width:100%;
-  height:250px;
-  border:0;
-  border-radius:10px;
-}
-
-/* BOXES */
-.footer{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-  padding:20px;
-}
-.box{
-  background:#111;
-  padding:15px;
-  border-radius:10px;
-  text-align:center;
-}
-.box img{
-  width:100px;
-}
-
-/* BOTÃO */
-.btn{
-  display:inline-block;
-  margin-top:10px;
-  padding:10px 15px;
-  background:red;
-  color:#fff;
-  text-decoration:none;
-  border-radius:5px;
-}
-
-/* COPYRIGHT */
-.copy{
-  text-align:center;
-  padding:20px;
-  color:#aaa;
-}
 </style>
 
 </head>
@@ -122,75 +119,39 @@ iframe{
 
 <!-- HERO -->
 <div class="hero">
+
   <div class="lang">
     <button>EN</button>
     <button>JP</button>
   </div>
+
+  <div class="hero-content">
+
+    <!-- SE TIVER LOGO PNG, COLOCA AQUI -->
+    <!-- <img src="logo.png" class="logo"> -->
+
+    <div class="title">
+      JDM <span>DRIFT</span><br>
+      CARS
+    </div>
+
+    <div class="subtitle">
+      Japan Quality.
+    </div>
+
+    <a class="btn" href="https://wa.me/819041616477">
+      WhatsApp
+    </a>
+
+  </div>
+
 </div>
 
-<!-- BOTÕES FIXOS -->
+<!-- BOTÕES -->
 <div class="float">
   <a class="line" href="#">LINE</a>
   <a class="whatsapp" href="https://wa.me/819041616477">WhatsApp</a>
 </div>
-
-<!-- GALERIA -->
-<div class="section">
-  <h2>GALLERY</h2>
-
-  <div class="gallery">
-    <img src="IMG_0487.jpeg">
-    <img src="IMG_1248.jpeg">
-    <img src="IMG_4007.jpeg">
-    <img src="IMG_6080.jpeg">
-    <img src="IMG_6863.jpeg">
-    <img src="IMG_6963.jpeg">
-    <img src="IMG_7650.jpeg">
-    <img src="IMG_8500.jpeg">
-    <img src="IMG_8521.jpeg">
-    <img src="IMG_9382.jpeg">
-  </div>
-
-</div>
-
-<!-- MAPA -->
-<div class="section">
-  <iframe src="https://maps.google.com/maps?q=長野県東筑摩郡朝日村西洗馬410-1&output=embed"></iframe>
-
-  <p>
-  〒390-1101<br>
-  長野県東筑摩郡朝日村西洗馬410-1
-  </p>
-
-  <a class="btn">Google Maps</a>
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-
-  <div class="box">
-    <h3>Goo-net</h3>
-    <a class="btn">在庫を見る</a>
-  </div>
-
-  <div class="box">
-    <h3>CarSensor</h3>
-    <a class="btn">在庫を見る</a>
-  </div>
-
-  <div class="box">
-    <h3>LINE QR</h3>
-    <img src="IMG_1.jpeg">
-  </div>
-
-  <div class="box">
-    <h3>Instagram</h3>
-    <a class="btn">@msmotors_oficial</a>
-  </div>
-
-</div>
-
-<div class="copy">© MS Motors Japan</div>
 
 </body>
 </html>
