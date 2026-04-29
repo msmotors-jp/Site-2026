@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>MS Motors Japan</title>
 
 <style>
@@ -12,15 +11,15 @@
 body{
   background:#000;
   color:#fff;
-  font-family:Arial, sans-serif;
+  font-family:Arial;
 }
 
-/* HERO */
+/* CAPA */
 .hero{
   height:100vh;
   background:
-    linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.2)),
-    url("46BFE8F9-A211-4E9E-BA87-77DE3C198A12.png") center/cover no-repeat;
+  linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.3)),
+  url("46BFE8F9-A211-4E9E-BA87-77DE3C198A12.png") center/cover no-repeat;
   position:relative;
 }
 
@@ -33,32 +32,24 @@ body{
   filter: brightness(0) invert(1);
 }
 
-/* LANG */
-.lang{
-  position:absolute;
-  top:20px;
-  right:20px;
-}
-.lang button{
-  background:#111;
-  color:#fff;
-  border:1px solid #777;
-  padding:6px 10px;
-  margin-left:5px;
-}
-
-/* TEXT */
-.hero-text{
+/* TEXTO */
+.text{
   position:absolute;
   bottom:80px;
   left:20px;
 }
-.hero-text h1{
+
+.text h1{
   font-size:40px;
 }
-.hero-text span{color:red;}
-.hero-text p{margin-top:10px;color:#ccc;}
+.text span{color:red;}
 
+.text p{
+  margin-top:10px;
+  color:#ccc;
+}
+
+/* BOTÃO */
 .btn{
   display:inline-block;
   margin-top:15px;
@@ -69,48 +60,49 @@ body{
   text-decoration:none;
 }
 
-/* GALLERY */
+/* GALERIA */
 .gallery{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:1fr 1fr;
   gap:8px;
   padding:20px;
 }
+
 .gallery img{
   width:100%;
-  height:170px;
+  height:160px;
   object-fit:cover;
   border-radius:6px;
 }
 
-/* SECTION */
+/* MAPA */
 .section{
-  padding:30px 20px;
+  padding:25px;
   text-align:center;
 }
 
-/* FOOTER */
+/* RODAPÉ */
 .footer{
-  display:flex;
-  flex-direction:column;
-  gap:25px;
-  padding:30px 20px;
+  padding:30px;
   text-align:center;
 }
 
 .qr{
   width:200px;
+  margin-top:10px;
 }
 
-.btn-red{
+.red{
   background:red;
   padding:10px;
   border-radius:6px;
+  display:inline-block;
+  margin-top:10px;
   color:#fff;
   text-decoration:none;
 }
 
-/* FLOAT */
+/* BOTÕES LATERAIS */
 .float{
   position:fixed;
   right:15px;
@@ -127,38 +119,34 @@ body{
   text-decoration:none;
 }
 
-.green{background:#00c300;}
-.whatsapp{background:#25D366;}
+.line{background:#00c300;}
+.whats{background:#25D366;}
 
 .copy{
   text-align:center;
+  color:#777;
   padding:15px;
-  color:#888;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
+<!-- CAPA -->
+<div class="hero">
 
 <img src="logo.png.PNG" class="logo">
 
-<div class="lang">
-<button>EN</button>
-<button>JP</button>
-</div>
-
-<div class="hero-text">
+<div class="text">
 <h1>JDM <span>DRIFT</span><br>CARS</h1>
 <p>Japan Quality.</p>
+
 <a href="https://wa.me/819041616477" class="btn">WhatsApp</a>
 </div>
 
-</section>
+</div>
 
-<!-- GALLERY -->
+<!-- FOTOS -->
 <div class="gallery">
 <img src="IMG_0487.jpeg">
 <img src="IMG_1248.jpeg">
@@ -172,50 +160,37 @@ body{
 <img src="IMG_9382.jpeg">
 </div>
 
-<!-- MAP -->
-<section class="section">
+<!-- MAPA -->
+<div class="section">
 <h2>所在地</h2>
 <p>〒390-1101<br>長野県東筑摩郡朝日村西洗馬410-1</p>
 
 <iframe src="https://maps.google.com/maps?q=長野県東筑摩郡朝日村西洗馬410-1&output=embed"
-width="100%" height="250" style="border:0;"></iframe>
-</section>
+width="100%" height="250"></iframe>
+</div>
 
-<!-- FOOTER -->
-<section class="footer">
+<!-- CONTATO -->
+<div class="footer">
 
-<div>
 <h3>Goo-net</h3>
-<a class="btn-red" href="https://www.goo-net.com/php/shop/stock.php?client_id=1201441&area_id=14&baitai=goo">
+<a class="red" href="https://www.goo-net.com/php/shop/stock.php?client_id=1201441&area_id=14&baitai=goo">
 在庫を見る
 </a>
-</div>
 
-<div>
-<h3>CarSensor</h3>
-<a class="btn-red" href="https://www.carsensor.net/">
-在庫を見る
-</a>
-</div>
-
-<div>
-<h3>LINE QR</h3>
+<h3 style="margin-top:20px;">LINE QR</h3>
 <img src="Image-1.jpeg" class="qr">
-</div>
 
-<div>
-<h3>Instagram</h3>
-<a class="btn-red" href="https://instagram.com/msmotors_oficial">
+<h3 style="margin-top:20px;">Instagram</h3>
+<a class="red" href="https://instagram.com/msmotors_oficial">
 @msmotors_oficial
 </a>
+
 </div>
 
-</section>
-
-<!-- FLOAT -->
+<!-- BOTÕES -->
 <div class="float">
-<a class="green" href="#">LINE</a>
-<a class="whatsapp" href="https://wa.me/819041616477">WhatsApp</a>
+<a class="line" href="#">LINE</a>
+<a class="whats" href="https://wa.me/819041616477">WhatsApp</a>
 </div>
 
 <div class="copy">© MS Motors Japan</div>
