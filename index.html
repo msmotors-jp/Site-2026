@@ -7,22 +7,22 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;color:white;font-family:Arial,sans-serif}
-a{text-decoration:none;color:white}
+body{background:#000;color:#fff;font-family:Arial}
 
 .hero{
   height:100vh;
   position:relative;
   background:
     linear-gradient(to right,rgba(0,0,0,.65),rgba(0,0,0,.2)),
-    url("46BFE8F9-A211-4E9E-BA87-77DE3C198A12.png") center/cover no-repeat;
+    url("hero.jpg") center/cover no-repeat;
 }
 
 .logo{
   position:absolute;
   top:25px;
   left:25px;
-  width:150px;
+  width:140px;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
 }
 
 .lang{
@@ -30,10 +30,11 @@ a{text-decoration:none;color:white}
   top:25px;
   right:25px;
 }
+
 .lang button{
   background:#111;
   color:#fff;
-  border:1px solid #fff;
+  border:1px solid #777;
   padding:8px 12px;
   margin-left:6px;
 }
@@ -41,176 +42,182 @@ a{text-decoration:none;color:white}
 .hero-text{
   position:absolute;
   left:30px;
-  bottom:120px;
+  bottom:90px;
 }
+
 .hero-text h1{
-  font-size:50px;
+  font-size:48px;
   font-weight:900;
 }
-.hero-text span{color:red}
+
+.hero-text span{
+  color:#ff2a2a;
+}
+
 .hero-text p{
   margin-top:10px;
-  font-size:20px;
+  color:#ccc;
 }
 
 .btn{
   display:inline-block;
-  padding:12px 22px;
   margin-top:20px;
-  border-radius:5px;
+  padding:12px 20px;
+  border-radius:6px;
   font-weight:bold;
 }
-.red{background:#d60000}
-.green{background:#00c300}
 
-.features{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  border-top:1px solid #222;
-  border-bottom:1px solid #222;
-}
-.feature{
-  text-align:center;
-  padding:25px 10px;
-  border-right:1px solid #222;
-}
-.feature h3{color:red;margin-bottom:8px}
+.red{background:#e00000;color:#fff}
+.green{background:#00c300;color:#fff}
 
-.section{
-  padding:30px 15px;
-  text-align:center;
-}
-
+/* GALERIA */
 .gallery{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:8px;
-}
-.gallery img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
+  padding:20px;
 }
 
-iframe{
+.gallery img{
   width:100%;
-  height:250px;
-  border:0;
   border-radius:6px;
 }
 
-.footer{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-  padding:25px 15px;
-  border-top:1px solid #222;
+/* MAPA */
+.map{
+  padding:20px;
 }
-.box{text-align:center}
-.qr{width:120px}
 
-.float{
-  position:fixed;
-  right:15px;
-  bottom:20px;
+/* CAR SENSOR */
+.center{
+  text-align:center;
+  padding:30px;
+}
+
+.center a{
+  display:inline-block;
+  background:#ff3c00;
+  padding:14px 20px;
+  border-radius:6px;
+  color:#fff;
+  margin-top:10px;
+}
+
+/* QR */
+.qr{
+  width:160px;
+  margin:20px auto;
+  display:block;
+}
+
+/* CONTATO */
+.contact{
   display:flex;
   flex-direction:column;
   gap:10px;
-}
-.float a{
-  padding:12px 18px;
-  border-radius:30px;
-  font-weight:bold;
+  align-items:center;
+  padding:20px;
 }
 
-.copy{
+.instagram{
+  background:#e00000;
+  padding:12px 20px;
+  border-radius:6px;
+}
+
+/* RODAPÉ */
+footer{
   text-align:center;
-  padding:15px;
-  color:#888;
-  font-size:12px;
-}
-
-@media(max-width:700px){
-  .hero-text h1{font-size:42px}
-  .features{grid-template-columns:repeat(2,1fr)}
-  .footer{grid-template-columns:1fr}
+  padding:20px;
+  color:#aaa;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
 
-<img src="7EA47DE1-F50E-4A8D-B88B-34E002C5BCDF.png" class="logo">
+<img src="logo.png" class="logo">
 
 <div class="lang">
-<button>EN</button>
-<button>JP</button>
+  <button>EN</button>
+  <button>JP</button>
 </div>
 
 <div class="hero-text">
-<h1>JDM <span>DRIFT</span><br>CARS</h1>
-<p>Japan Quality.</p>
-<a class="btn red" href="https://wa.me/819041616477">WhatsApp</a>
+  <h1>JDM <span>DRIFT</span><br>CARS</h1>
+  <p>Japan Quality.</p>
+
+  <a href="https://wa.me/819041616477" class="btn red">WhatsApp</a>
 </div>
 
 </section>
 
-<section class="features">
-<div class="feature"><h3>ターボ車専門店</h3><p>高品質なJDM車を厳選</p></div>
-<div class="feature"><h3>整備・カスタム</h3><p>自社工場完備で安心</p></div>
-<div class="feature"><h3>安心取引</h3><p>国内外のお客様に対応</p></div>
-<div class="feature"><h3>輸出対応</h3><p>海外のお客様も相談可</p></div>
+<!-- GALERIA -->
+<section class="gallery">
+<img src="car1.jpg">
+<img src="car2.jpg">
+<img src="car3.jpg">
+<img src="car4.jpg">
+<img src="car5.jpg">
+<img src="car6.jpg">
+<img src="car7.jpg">
+<img src="car8.jpg">
+<img src="car9.jpg">
+<img src="car10.jpg">
 </section>
 
-<section class="section">
-<h2>Gallery</h2><br>
-<div class="gallery">
-<img src="IMG_0487.jpeg">
-<img src="IMG_1248.jpeg">
-<img src="IMG_4007.jpeg">
-<img src="IMG_6080.jpeg">
-<img src="IMG_6863.jpeg">
-<img src="IMG_6963.jpeg">
-<img src="IMG_7650.jpeg">
-<img src="IMG_8500.jpeg">
-<img src="IMG_8521.jpeg">
-<img src="IMG_9382.jpeg">
-</div>
+<!-- LOCAL -->
+<section class="map">
+<h2>所在地</h2>
+<p>〒390-1101<br>長野県東筑摩郡朝日村西洗馬410-1</p>
+<br>
+<a href="https://maps.google.com" target="_blank" class="btn red">Google Mapsで見る</a>
 </section>
 
-<section class="section">
-<h2>所在地</h2><br>
-<p>〒390-1101<br>長野県東筑摩郡朝日村西洗馬410-1</p><br>
-<iframe src="https://maps.google.com/maps?q=長野県東筑摩郡朝日村西洗馬410-1&output=embed"></iframe>
+<!-- GOO NET -->
+<section class="center">
+<h2>在庫を見る</h2>
+<p>最新の在庫はGoo-netで確認できます</p>
+
+<a href="https://www.goo-net.com/php/shop/stock.php?client_id=1201441&area_id=14&baitai=goo" target="_blank">
+Goo-netで在庫を見る
+</a>
 </section>
 
-<section class="footer">
+<!-- CAR SENSOR -->
+<section class="center">
+<h2>CarSensor</h2>
 
-<div class="box">
-<h3>CarSensor</h3><br>
-<a class="btn red" href="https://www.carsensor.net/shop/nagano/329830001/?BKKN=AU6729676253" target="_blank">在庫を見る</a>
-</div>
-
-<div class="box">
-<h3>LINE QR</h3><br>
-<img src="line-qr.png.JPG" class="qr">
-</div>
-
-<div class="box">
-<h3>Instagram</h3><br>
-<a class="btn red" href="https://instagram.com/msmotors_oficial">@msmotors_oficial</a>
-</div>
-
+<a href="#">
+在庫を見る
+</a>
 </section>
 
-<div class="float">
-<a class="green" href="#">LINE</a>
-<a class="green" href="https://wa.me/819041616477">WhatsApp</a>
-</div>
+<!-- LINE QR -->
+<section class="center">
+<h2>LINE QRコード</h2>
 
-<div class="copy">© MS Motors Japan</div>
+<img src="line-qr.jpg" class="qr">
+</section>
+
+<!-- CONTATO -->
+<section class="contact">
+<h2>Instagram</h2>
+
+<a href="https://instagram.com/msmotors_oficial" class="instagram">
+@msmotors_oficial
+</a>
+
+<a href="#" class="btn green">LINE</a>
+<a href="https://wa.me/819041616477" class="btn green">WhatsApp</a>
+</section>
+
+<footer>
+© MS Motors Japan
+</footer>
 
 </body>
 </html>
