@@ -6,177 +6,133 @@
 <title>MS Motors Japan</title>
 
 <style>
-body{
-    margin:0;
-    font-family:Arial;
-    background:#000;
-    color:#fff;
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #000;
+  color: #fff;
 }
 
-header{
-    position:absolute;
-    top:0;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px;
-    z-index:10;
+.hero {
+  position: relative;
 }
 
-header img{
-    height:40px;
+.hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
 }
 
-.lang button{
-    background:transparent;
-    border:1px solid #fff;
-    color:#fff;
-    padding:5px 10px;
-    margin-left:5px;
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 150px;
 }
 
-.hero{
-    height:100vh;
-    background:url('hero.jpg') center/cover no-repeat;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+.buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 
-.hero h1{
-    font-size:60px;
+.buttons a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.btn{
-    background:red;
-    padding:15px 30px;
-    margin-top:20px;
-    text-decoration:none;
-    color:#fff;
-    display:inline-block;
+.whatsapp { background: green; }
+.line { background: #00c300; }
+
+.gallery {
+  padding: 20px;
 }
 
-.slider{
-    display:flex;
-    overflow-x:auto;
-    gap:10px;
-    padding:20px;
+.gallery h2 {
+  text-align: center;
 }
 
-.slider img{
-    width:300px;
-    border-radius:10px;
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
 }
 
-.section{
-    padding:40px 20px;
-    text-align:center;
+.slider img {
+  width: 250px;
+  border-radius: 10px;
 }
 
-iframe{
-    width:100%;
-    height:300px;
-    border:0;
+.section {
+  padding: 20px;
+  text-align: center;
 }
 
-.footer{
-    background:#111;
-    padding:20px;
-    text-align:center;
+iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
 }
 
-.line-qr{
-    width:150px;
+.qr {
+  text-align: center;
+  padding: 20px;
+}
+
+.qr img {
+  width: 200px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<img src="logo.png">
-<div class="lang">
-<button onclick="setLang('en')">EN</button>
-<button onclick="setLang('jp')">JP</button>
-</div>
-</header>
+<!-- HERO -->
+<div class="hero">
+  <img src="hero.jpg.PNG">
+  <img class="logo" src="logo.png.PNG">
 
-<section class="hero">
-<h1 id="title">JDM DRIFT CARS</h1>
-<p id="subtitle">Japan Quality</p>
-
-<a href="https://wa.me/819041616477" class="btn">WhatsApp</a>
-</section>
-
-<section class="section">
-<h2>Gallery</h2>
-
-<div class="slider">
-
-<img src="IMG_8233.jpeg">
-<img src="file1.jpg">
-<img src="file2.jpg">
-<img src="file3.jpg">
-<img src="file4.jpg">
-<img src="file5.jpg">
-<img src="file6.jpg">
-<img src="file7.jpg">
-<img src="file8.jpg">
-
+  <div class="buttons">
+    <a class="line" href="https://line.me/ti/p/09041616477">LINE</a>
+    <a class="whatsapp" href="https://wa.me/819041616477">WhatsApp</a>
+  </div>
 </div>
 
-</section>
+<!-- GALLERY -->
+<div class="gallery">
+  <h2>Gallery</h2>
 
-<section class="section">
-<h2 id="location">Location</h2>
+  <div class="slider">
+    <img src="car1.jpg">
+    <img src="car2.jpg">
+    <img src="car3.jpg">
+    <img src="car4.jpg">
+    <img src="car5.jpg">
+    <img src="car6.jpg">
+    <img src="car7.jpg">
+    <img src="car8.jpg">
+    <img src="car9.jpg">
+    <img src="car10.jpg">
+  </div>
+</div>
 
-<p>
-〒390-1101<br>
-長野県東筑摩郡朝日村西洗馬410-1
-</p>
+<!-- LOCATION -->
+<div class="section">
+  <h2>Location</h2>
+  <p>〒390-1101<br>長野県東筑摩郡朝日村西洗馬410-1</p>
 
-<iframe src="https://maps.google.com/maps?q=朝日村西洗馬410-1&output=embed"></iframe>
-</section>
+  <iframe src="https://maps.google.com/maps?q=410-1%20Nishiseba&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
 
-<section class="section">
-<h2>Contact</h2>
-
-<a href="https://line.me/ti/p/09041616477" class="btn">LINE</a>
-
-<br><br>
-
-<img src="line-qr.jpg" class="line-qr">
-
-</section>
-
-<section class="section">
-<h2>CarSensor</h2>
-
-<a href="https://www.carsensor.net/shop/nagano/329830001/?BKKN=AU6729676253" class="btn">
-View Inventory
-</a>
-</section>
-
-<footer class="footer">
-© MS Motors Japan
-</footer>
-
-<script>
-function setLang(lang){
-    if(lang === 'jp'){
-        document.getElementById('title').innerText = "JDM ドリフトカー";
-        document.getElementById('subtitle').innerText = "日本品質";
-        document.getElementById('location').innerText = "所在地";
-    }else{
-        document.getElementById('title').innerText = "JDM DRIFT CARS";
-        document.getElementById('subtitle').innerText = "Japan Quality";
-        document.getElementById('location').innerText = "Location";
-    }
-}
-</script>
+<!-- QR CODE -->
+<div class="qr">
+  <h2>LINE QR</h2>
+  <img src="line-qr.png.JPG">
+</div>
 
 </body>
 </html>
