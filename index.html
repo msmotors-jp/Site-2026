@@ -7,22 +7,22 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;color:#fff;font-family:Arial,sans-serif}
+body{background:#000;color:white;font-family:Arial,sans-serif}
 a{text-decoration:none;color:white}
 
 .hero{
   height:100vh;
-  background:
-    linear-gradient(to right,rgba(0,0,0,.75),rgba(0,0,0,.15)),
-    url("46BFE8F9-A211-4E9E-BA87-77DE3C198A12.png") center/cover no-repeat;
   position:relative;
+  background:
+    linear-gradient(to right,rgba(0,0,0,.65),rgba(0,0,0,.2)),
+    url("46BFE8F9-A211-4E9E-BA87-77DE3C198A12.png") center/cover no-repeat;
 }
 
-.logo{7EA47DE1-F50E-4A8D-B88B-34E002C5BCDF.png
+.logo{
   position:absolute;
   top:25px;
   left:25px;
-  width:170px;
+  width:150px;
 }
 
 .lang{
@@ -44,24 +44,23 @@ a{text-decoration:none;color:white}
   bottom:120px;
 }
 .hero-text h1{
-  font-size:52px;
-  line-height:1;
+  font-size:50px;
   font-weight:900;
 }
 .hero-text span{color:red}
 .hero-text p{
-  font-size:22px;
-  margin-top:15px;
+  margin-top:10px;
+  font-size:20px;
 }
 
 .btn{
   display:inline-block;
-  padding:14px 24px;
+  padding:12px 22px;
   margin-top:20px;
   border-radius:5px;
   font-weight:bold;
 }
-.red{background:#d90000}
+.red{background:#d60000}
 .green{background:#00c300}
 
 .features{
@@ -72,15 +71,16 @@ a{text-decoration:none;color:white}
 }
 .feature{
   text-align:center;
-  padding:25px 8px;
+  padding:25px 10px;
   border-right:1px solid #222;
 }
 .feature h3{color:red;margin-bottom:8px}
 
 .section{
-  padding:35px 18px;
+  padding:30px 15px;
   text-align:center;
 }
+
 .gallery{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -88,48 +88,46 @@ a{text-decoration:none;color:white}
 }
 .gallery img{
   width:100%;
-  height:170px;
+  height:160px;
   object-fit:cover;
-  border-radius:6px;
 }
 
 iframe{
   width:100%;
-  height:280px;
+  height:250px;
   border:0;
-  border-radius:8px;
+  border-radius:6px;
 }
 
 .footer{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  padding:30px 18px;
+  gap:10px;
+  padding:25px 15px;
   border-top:1px solid #222;
 }
 .box{text-align:center}
-.qr{width:130px}
+.qr{width:120px}
 
 .float{
   position:fixed;
-  right:18px;
-  bottom:22px;
+  right:15px;
+  bottom:20px;
   display:flex;
   flex-direction:column;
   gap:10px;
-  z-index:99;
 }
 .float a{
-  padding:13px 20px;
-  border-radius:40px;
+  padding:12px 18px;
+  border-radius:30px;
   font-weight:bold;
 }
 
 .copy{
   text-align:center;
-  padding:18px;
+  padding:15px;
   color:#888;
-  font-size:13px;
+  font-size:12px;
 }
 
 @media(max-width:700px){
@@ -143,74 +141,76 @@ iframe{
 <body>
 
 <section class="hero">
-  <img src="logo.png.PNG" class="logo">
 
-  <div class="lang">
-    <button>EN</button>
-    <button>JP</button>
-  </div>
+<img src="7EA47DE1-F50E-4A8D-B88B-34E002C5BCDF.png" class="logo">
 
-  <div class="hero-text">
-    <h1>JDM <span>DRIFT</span><br>CARS</h1>
-    <p>Japan Quality.</p>
-    <a class="btn red" href="https://wa.me/819041616477">WhatsApp</a>
-  </div>
+<div class="lang">
+<button>EN</button>
+<button>JP</button>
+</div>
+
+<div class="hero-text">
+<h1>JDM <span>DRIFT</span><br>CARS</h1>
+<p>Japan Quality.</p>
+<a class="btn red" href="https://wa.me/819041616477">WhatsApp</a>
+</div>
+
 </section>
 
 <section class="features">
-  <div class="feature"><h3>ターボ車専門店</h3><p>高品質なJDM車を厳選</p></div>
-  <div class="feature"><h3>整備・カスタム</h3><p>自社工場完備で安心</p></div>
-  <div class="feature"><h3>安心取引</h3><p>国内外のお客様に対応</p></div>
-  <div class="feature"><h3>輸出サポート</h3><p>海外のお客様も相談可</p></div>
+<div class="feature"><h3>ターボ車専門店</h3><p>高品質なJDM車を厳選</p></div>
+<div class="feature"><h3>整備・カスタム</h3><p>自社工場完備で安心</p></div>
+<div class="feature"><h3>安心取引</h3><p>国内外のお客様に対応</p></div>
+<div class="feature"><h3>輸出対応</h3><p>海外のお客様も相談可</p></div>
 </section>
 
 <section class="section">
-  <h2>Gallery</h2><br>
-  <div class="gallery">
-    <img src="IMG_0487.jpeg">
-    <img src="IMG_1248.jpeg">
-    <img src="IMG_4007.jpeg">
-    <img src="IMG_6080.jpeg">
-    <img src="IMG_6863.jpeg">
-    <img src="IMG_6963.jpeg">
-    <img src="IMG_7650.jpeg">
-    <img src="IMG_8500.jpeg">
-    <img src="IMG_8521.jpeg">
-    <img src="IMG_9382.jpeg">
-  </div>
+<h2>Gallery</h2><br>
+<div class="gallery">
+<img src="IMG_0487.jpeg">
+<img src="IMG_1248.jpeg">
+<img src="IMG_4007.jpeg">
+<img src="IMG_6080.jpeg">
+<img src="IMG_6863.jpeg">
+<img src="IMG_6963.jpeg">
+<img src="IMG_7650.jpeg">
+<img src="IMG_8500.jpeg">
+<img src="IMG_8521.jpeg">
+<img src="IMG_9382.jpeg">
+</div>
 </section>
 
 <section class="section">
-  <h2>所在地</h2><br>
-  <p>〒390-1101<br>長野県東筑摩郡朝日村西洗馬410-1</p><br>
-  <iframe src="https://maps.google.com/maps?q=長野県東筑摩郡朝日村西洗馬410-1&output=embed"></iframe>
+<h2>所在地</h2><br>
+<p>〒390-1101<br>長野県東筑摩郡朝日村西洗馬410-1</p><br>
+<iframe src="https://maps.google.com/maps?q=長野県東筑摩郡朝日村西洗馬410-1&output=embed"></iframe>
 </section>
 
 <section class="footer">
-  <div class="box">
-    <h3>CarSensor</h3><br>
-    <a class="btn red" href="https://www.carsensor.net/shop/nagano/329830001/?BKKN=AU6729676253&fed=othshoplinkb20190809001ns" target="_blank">在庫を見る</a>
-  </div>
 
-  <div class="box">
-    <h3>LINE QR</h3><br>
-    <img src="line-qr.png.JPG" class="qr">
-  </div>
+<div class="box">
+<h3>CarSensor</h3><br>
+<a class="btn red" href="https://www.carsensor.net/shop/nagano/329830001/?BKKN=AU6729676253" target="_blank">在庫を見る</a>
+</div>
 
-  <div class="box">
-    <h3>Instagram</h3><br>
-    <a class="btn red" href="https://instagram.com/msmotors_oficial" target="_blank">@msmotors_oficial</a>
-  </div>
+<div class="box">
+<h3>LINE QR</h3><br>
+<img src="line-qr.png.JPG" class="qr">
+</div>
+
+<div class="box">
+<h3>Instagram</h3><br>
+<a class="btn red" href="https://instagram.com/msmotors_oficial">@msmotors_oficial</a>
+</div>
+
 </section>
 
 <div class="float">
-  <a class="green" href="#line">LINE</a>
-  <a class="green" href="https://wa.me/819041616477">WhatsApp</a>
+<a class="green" href="#">LINE</a>
+<a class="green" href="https://wa.me/819041616477">WhatsApp</a>
 </div>
 
-<div class="copy">
-  © MS Motors Japan
-</div>
+<div class="copy">© MS Motors Japan</div>
 
 </body>
 </html>
